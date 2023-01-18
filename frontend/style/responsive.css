@@ -1,0 +1,18 @@
+@media only screen and (max-width: 1000px) {
+
+}
+
+@media only screen and (max-width: 500px) {
+    #top_blue_left img{
+        width:20%
+    }
+    #top_blue_left img,#top_blue_left a{
+        font-weight: 400;
+    }
+    #top_blue_right{
+        width:50%;
+        font-size: xx-small;
+        border:1px solid white;
+        justify-content: flex-end;
+    }
+}
