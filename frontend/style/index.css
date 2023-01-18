@@ -1,0 +1,114 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+/* ----------------------Top_red Bar ------------------------*/
+#top_red{
+    /* border:1px solid black; */
+    color:white;
+    display: flex;
+    flex-direction: row;
+    font-size: xx-small;
+    justify-content: space-between;
+    background-color:rgb(255, 0, 0);
+    align-items: center;
+}
+
+#top_red>div:first-child,#top_red>div:last-child{
+    color: white;
+    font-size: x-large;
+}
+
+#top_red_text>div:nth-child(n+1){
+display: none;
+}
+#top_red_text>div:first-child{
+    display: block;
+}
+/*------------------------ Top_Blue_Bar --------------------*/
+
+#top_blue{
+    width: auto;
+    display: flex;
+    background-color:rgba(25,78,137,255);
+}
+#top_blue_left{
+    width:50%;
+    display: flex;
+    align-items: center;
+    border:1px solid rgba(25,78,137,255);
+}
+#top_blue_left img,#top_blue_left a{
+    padding-left: 20px;
+    font-weight: 600;
+    color:white;
+    text-decoration: none;
+    width:10%
+}
+#top_blue_right{
+    width:50%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    border:1px solid rgb(255, 0, 0);
+    font-size: x-small;
+    color:white;
+}
+#top_blue_right a{
+    padding-right: 20px;
+    font-weight: 600;
+    font-size: x-small;
+    color:white;
+    text-decoration: none;
+}
+
+/*------------------------ Pop Up-------------------- */
+#popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    visibility: hidden;
+  }
+  
+  #popup-content {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+  }
+  
+  /* ------------Search Bar----------- */
+
+  #search_bar{
+    border:2px solid black;
+    display:flex;
+    flex-direction: row;
+    align-items:center;
+    justify-content: space-evenly;
+  }
+  #search_bar img{
+    width:9%;
+  }
+  #search_bar div input{
+    border-radius: 50px;
+    text-align: center;
+    width:100%;
+    padding-top:10px;
+    padding-bottom: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;;
+  }
+  #search_bar div{
+    width:70%;
+  }
+  #search_bar i{
+    font-size: x-large;
+    color: rgba(25,78,137,255);
+  }
