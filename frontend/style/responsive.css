@@ -2,7 +2,7 @@
 
 }
 
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 800px) {
     #top_blue_left img{
         width:20%
     }
@@ -15,4 +15,16 @@
         border:1px solid white;
         justify-content: flex-end;
     }
+
+    .dropdown-content .col a{
+        padding: 1px;
+    }
+    .dropdown-content .col {
+        justify-content: space-evenly;
+        margin:0px;
+        padding: 0px;
+      }
+      .dropdown-content .row {
+        margin:2px;
+      }
 }

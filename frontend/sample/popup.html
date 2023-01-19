@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /* Define the modal styles */
+      #modal {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.6);
+        z-index: 10;
+      }
+
+      /* Define the modal content styles */
+      .modal-content {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: #fff;
+        padding: 20px;
+        text-align: center;
+      }
+
+      /* Define the close button styles */
+      #close-modal {
+        position: absolute;
+        top: 0;
+        right: 20px;
+        font-size: 36px;
+        cursor: pointer;
+      }
+
+      /* Hide the modal by default */
+      .hidden {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Create the button to trigger the modal -->
+    <button id="open-modal">Open Modal</button>
+
+    <!-- Create the modal container -->
+    <div id="modal" class="hidden">
+      <div class="modal-content">
+        <span id="close-modal">&times;</span>
+        <p>Modal Content</p>
+      </div>
+    </div>
+  </body>
+</html>
+<script>
+  // Get the modal, button and close button
+  var modal = document.getElementById("modal");
+  var openModal = document.getElementById("open-modal");
+  var closeModal = document.getElementById("close-modal");
+
+  // When the user clicks the button, open the modal
+  openModal.onclick = function () {
+    modal.classList.remove("hidden");
+  };
+
+  // When the user clicks the close button, close the modal
+  closeModal.onclick = function () {
+    modal.classList.add("hidden");
+  };
+
+  // When the user clicks outside of the modal, close the modal
+  window.onclick = function (event) {
+    if (event.target == modal) {
+      modal.classList.add("hidden");
+    }
+  };
+</script>

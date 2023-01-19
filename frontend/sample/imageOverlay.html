@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /* Define the image container */
+      .image-container {
+        position: relative;
+        width:30%;
+      }
+
+      /* Define the overlay element */
+      .overlay {
+        position: absolute;
+        width: 100%;
+        bottom: 0;
+        height: 50%;
+        background-color: rgba(0, 0, 0, 0.6);
+        color: #fff;
+        text-align: center;
+        opacity: 0;
+        transition: all 0.3s ease-in-out;
+      }
+
+      /* Show the overlay on hover */
+      .image-container:hover .overlay {
+        opacity: 1;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="image-container">
+      <img width="100%"
+        src="https://cdn.pixabay.com/photo/2018/08/26/23/55/woman-3633737__340.jpg"
+        alt="Image"
+      />
+      <div class="overlay">
+        <p>Hover over me</p>
+      </div>
+    </div>
+  </body>
+</html>
