@@ -2,7 +2,7 @@ let text=document.querySelectorAll("#top_red_text > div")
 let left=document.querySelector("#top_red>div:first-child>i")
 let right=document.querySelector("#top_red>div:last-child>i")
 var count=1;
-
+//---------------------Top Red Bar-----------------------//
 
 left.addEventListener("click",()=>{
     console.log('left');
@@ -31,8 +31,8 @@ right.addEventListener("click",()=>{
     }
     count++;
 })
-//---------------------Top Red Bar-----------------------//
 
+// Pop Up------------------------------------------->
 window.onload = function() {
     document.getElementById("popup").style.visibility = "visible";
   }
@@ -40,3 +40,11 @@ window.onload = function() {
     document.getElementById("popup").style.visibility = "hidden";
   }
   
+
+  function openNav() {
+    document.getElementById("mySidenav").style.width = "250px";
+  }
+
+  function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+  }

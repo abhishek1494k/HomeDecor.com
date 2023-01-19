@@ -1,0 +1,40 @@
+*{
+  font-family: sans-serif;
+}
+      .nav-icon {
+        /* position: absolute; */
+        cursor: pointer;
+        border:1px solid rgb(255, 255, 255);
+      }
+      .sidenav {
+        height: 100%;
+        width: 0;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        background-color: rgb(255, 255, 255);
+        overflow-x: hidden;
+        transition: 0.5s;
+        padding-top: 60px;
+        border:1px solid  rgb(17, 53, 94);
+      }
+
+      .sidenav a {
+        padding: 8px 8px 8px 32px;
+        text-decoration: none;
+        font-size: 20px;
+        color:  rgb(17, 53, 94);
+        display: block;
+        transition: 0.3s;
+        border-bottom:1px solid  rgb(17, 53, 94);
+      }
+
+      .sidenav a:hover {
+        color: #000000;
+      }
+
+       #closebtn {
+        position: relative;
+        margin-left: 50px;
+      }

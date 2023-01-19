@@ -11,7 +11,14 @@
     ></script>
     <link rel="stylesheet" href="../style/index.css" />
     <link rel="stylesheet" href="../style/responsive.css" />
-    <link rel="stylesheet" href="../style/dropdown.css">
+    <link rel="stylesheet" href="../style/dropdown.css" />
+    <link rel="stylesheet" href="../style/leftDropDown.css" />
+    <link rel="stylesheet" href="../style/crousel.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="../style/cardSlider.css" />
   </head>
   <body>
     <!---------- Top red Bar ----------->
@@ -61,8 +68,17 @@
       </div>
     </div>
     <!-- Search Bar  -->
+    <div id="mySidenav" class="sidenav">
+      <div class="nav-icon" onclick="closeNav()">
+        <i id="closebtn" class="fa-solid fa-xmark"></i>
+      </div>
+      <a href="#">Home</a>
+      <a href="#">About</a>
+      <a href="#">Contact</a>
+    </div>
+
     <div id="search_bar">
-      <i class="fa-solid fa-bars"></i>
+      <i class="fa-solid fa-bars nav-icon" onclick="openNav()"></i>
       <img src="../Media/logo1.png" alt="#" />
       <div>
         <input
@@ -72,7 +88,7 @@
       </div>
       <i class="fa-solid fa-cart-shopping"></i>
     </div>
-    <!-- Pop Up -->
+    <!--------------------Pop Up -------------------------->
     <!-- <div id="popup">
       <div id="popup-content">
         <p>Welcome to my website!</p>
@@ -80,84 +96,1078 @@
       </div>
     </div> -->
 
-    <!--------------------- DropDown Menu ----------------------->
-
-
-    <div style="display:flex;">
+    <!--------------------- DropDown Menu --------------------->
+    <!-- 1 -->
+    <div style="display: flex">
       <div class="navbar">
         <div class="dropdown">
-          <button class="dropbtn">bedding
+          <button class="dropbtn">
+            Bedding
             <i class="fa fa-caret-down"></i>
           </button>
           <div class="dropdown-content">
             <div class="row">
               <div class="col">
-                <h3>Column 1</h3>
-                <a href="#">Link 1</a>
-                <a href="#">Link 2</a>
-                <a href="#">Link 3</a>
+                <h5>Bedding</h5>
+                <a href="#">comforter sets</a>
+                <a href="#">bed in a bag</a>
+                <a href="#">duvet cover</a>
+                <a href="#">quilts</a>
+                <a href="#">kids bedding</a>
               </div>
               <div class="col">
-                <h3>Column 2</h3>
-                <a href="#">Link 4</a>
-                <a href="#">Link 5</a>
-                <a href="#">Link 6</a>
+                <h5>Sheets</h5>
+                <a href="#">sheet sets</a>
+                <a href="#">flannel sheets</a>
+                <a href="#">fitted sheets</a>
+                <a href="#">flat sheets</a>
+                <a href="#">pillowcases</a>
               </div>
               <div class="col">
-                <h3>Column 3</h3>
-                <a href="#">Link 7</a>
-                <a href="#">Link 8</a>
-                <a href="#">Link 9</a>
+                <h5>Bedding basics</h5>
+                <a href="#">mattress pads</a>
+                <a href="#">mattress toppers</a>
+                <a href="#">mattress protectors</a>
+                <a href="">pillow protectors</a>
+                <a href="">alternative comforters</a>
               </div>
               <div class="col">
-                <h3>Column 4</h3>
-                <a href="#">Link 10</a>
-                <a href="#">Link 11</a>
-                <a href="#">Link 12</a>
+                <h5>Pillows</h5>
+                <a href="#">bed pillows</a>
+                <a href="#">throw pillows</a>
+                <a href="#">support pillows</a>
+                <a href="#">canopis</a>
+                <a href="#">air mattresses</a>
               </div>
             </div>
           </div>
-          
-        </div> 
+        </div>
       </div>
-  
+      <!-- 2 -->
       <div class="navbar">
         <div class="dropdown">
-          <button class="dropbtn">bedding22
+          <button class="dropbtn">
+            Bath
             <i class="fa fa-caret-down"></i>
           </button>
           <div class="dropdown-content">
             <div class="row">
               <div class="col">
-                <h3>Column 1</h3>
-                <a href="#">Link 1</a>
-                <a href="#">Link 2</a>
-                <a href="#">Link 3</a>
+                <h5>Bath Linens</h5>
+                <a href="#">bath Towel</a>
+                <a href="#">bath Towel Set</a>
+                <a href="#">bath rugs</a>
+                <a href="#">bath rugs sets</a>
               </div>
               <div class="col">
-                <h3>Column 2</h3>
-                <a href="#">Link 4</a>
-                <a href="#">Link 5</a>
-                <a href="#">Link 6</a>
+                <h5>Showers</h5>
+                <a href="#">shower curtains</a>
+                <a href="#">shower liners</a>
+                <a href="#">shower mats</a>
+                <a href="#">shower hooks/rods</a>
+                <a href="#">shower heeds</a>
               </div>
               <div class="col">
-                <h3>Column 3</h3>
-                <a href="#">Link 7</a>
-                <a href="#">Link 8</a>
-                <a href="#">Link 9</a>
+                <h5>Bath Hardware</h5>
+                <a href="#">towel bar</a>
+                <a href="#">towel rigs</a>
+                <a href="#">towel holder</a>
+                <a href="#">towel warmers</a>
+                <a href="#">towel hooks</a>
+                <a href="#">towel knob&pull</a>
               </div>
               <div class="col">
-                <h3>Column 4</h3>
-                <a href="#">Link 10</a>
-                <a href="#">Link 11</a>
-                <a href="#">Link 12</a>
+                <h5>Bath Furniture</h5>
+                <a href="#">bathroom shelvings</a>
+                <a href="#">makeup vanity</a>
+                <a href="#">bathroom seatings</a>
+                <a href="#">floor cabinets</a>
+                <a href="#">well cabinets</a>
               </div>
             </div>
           </div>
-          
-        </div> 
+        </div>
       </div>
+      <!-- 3 -->
+      <div class="navbar">
+        <div class="dropdown">
+          <button class="dropbtn">
+            Bath
+            <i class="fa fa-caret-down"></i>
+          </button>
+          <div class="dropdown-content">
+            <div class="row">
+              <div class="col">
+                <h5>Bath Linens</h5>
+                <a href="#">bath Towel</a>
+                <a href="#">bath Towel Set</a>
+                <a href="#">bath rugs</a>
+                <a href="#">bath rugs sets</a>
+              </div>
+              <div class="col">
+                <h5>Showers</h5>
+                <a href="#">shower curtains</a>
+                <a href="#">shower liners</a>
+                <a href="#">shower mats</a>
+                <a href="#">shower hooks/rods</a>
+                <a href="#">shower heeds</a>
+              </div>
+              <div class="col">
+                <h5>Bath Hardware</h5>
+                <a href="#">towel bar</a>
+                <a href="#">towel rigs</a>
+                <a href="#">towel holder</a>
+                <a href="#">towel warmers</a>
+                <a href="#">towel hooks</a>
+                <a href="#">towel knob&pull</a>
+              </div>
+              <div class="col">
+                <h5>Bath Furniture</h5>
+                <a href="#">bathroom shelvings</a>
+                <a href="#">makeup vanity</a>
+                <a href="#">bathroom seatings</a>
+                <a href="#">floor cabinets</a>
+                <a href="#">well cabinets</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- 4 -->
+      <div class="navbar">
+        <div class="dropdown">
+          <button class="dropbtn">
+            Bath
+            <i class="fa fa-caret-down"></i>
+          </button>
+          <div class="dropdown-content">
+            <div class="row">
+              <div class="col">
+                <h5>Bath Linens</h5>
+                <a href="#">bath Towel</a>
+                <a href="#">bath Towel Set</a>
+                <a href="#">bath rugs</a>
+                <a href="#">bath rugs sets</a>
+              </div>
+              <div class="col">
+                <h5>Showers</h5>
+                <a href="#">shower curtains</a>
+                <a href="#">shower liners</a>
+                <a href="#">shower mats</a>
+                <a href="#">shower hooks/rods</a>
+                <a href="#">shower heeds</a>
+              </div>
+              <div class="col">
+                <h5>Bath Hardware</h5>
+                <a href="#">towel bar</a>
+                <a href="#">towel rigs</a>
+                <a href="#">towel holder</a>
+                <a href="#">towel warmers</a>
+                <a href="#">towel hooks</a>
+                <a href="#">towel knob&pull</a>
+              </div>
+              <div class="col">
+                <h5>Bath Furniture</h5>
+                <a href="#">bathroom shelvings</a>
+                <a href="#">makeup vanity</a>
+                <a href="#">bathroom seatings</a>
+                <a href="#">floor cabinets</a>
+                <a href="#">well cabinets</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- 5 -->
+      <div class="navbar">
+        <div class="dropdown">
+          <button class="dropbtn">
+            Bath
+            <i class="fa fa-caret-down"></i>
+          </button>
+          <div class="dropdown-content">
+            <div class="row">
+              <div class="col">
+                <h5>Bath Linens</h5>
+                <a href="#">bath Towel</a>
+                <a href="#">bath Towel Set</a>
+                <a href="#">bath rugs</a>
+                <a href="#">bath rugs sets</a>
+              </div>
+              <div class="col">
+                <h5>Showers</h5>
+                <a href="#">shower curtains</a>
+                <a href="#">shower liners</a>
+                <a href="#">shower mats</a>
+                <a href="#">shower hooks/rods</a>
+                <a href="#">shower heeds</a>
+              </div>
+              <div class="col">
+                <h5>Bath Hardware</h5>
+                <a href="#">towel bar</a>
+                <a href="#">towel rigs</a>
+                <a href="#">towel holder</a>
+                <a href="#">towel warmers</a>
+                <a href="#">towel hooks</a>
+                <a href="#">towel knob&pull</a>
+              </div>
+              <div class="col">
+                <h5>Bath Furniture</h5>
+                <a href="#">bathroom shelvings</a>
+                <a href="#">makeup vanity</a>
+                <a href="#">bathroom seatings</a>
+                <a href="#">floor cabinets</a>
+                <a href="#">well cabinets</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- 6 -->
+      <div class="navbar">
+        <div class="dropdown">
+          <button class="dropbtn">
+            Bath
+            <i class="fa fa-caret-down"></i>
+          </button>
+          <div class="dropdown-content">
+            <div class="row">
+              <div class="col">
+                <h5>Bath Linens</h5>
+                <a href="#">bath Towel</a>
+                <a href="#">bath Towel Set</a>
+                <a href="#">bath rugs</a>
+                <a href="#">bath rugs sets</a>
+              </div>
+              <div class="col">
+                <h5>Showers</h5>
+                <a href="#">shower curtains</a>
+                <a href="#">shower liners</a>
+                <a href="#">shower mats</a>
+                <a href="#">shower hooks/rods</a>
+                <a href="#">shower heeds</a>
+              </div>
+              <div class="col">
+                <h5>Bath Hardware</h5>
+                <a href="#">towel bar</a>
+                <a href="#">towel rigs</a>
+                <a href="#">towel holder</a>
+                <a href="#">towel warmers</a>
+                <a href="#">towel hooks</a>
+                <a href="#">towel knob&pull</a>
+              </div>
+              <div class="col">
+                <h5>Bath Furniture</h5>
+                <a href="#">bathroom shelvings</a>
+                <a href="#">makeup vanity</a>
+                <a href="#">bathroom seatings</a>
+                <a href="#">floor cabinets</a>
+                <a href="#">well cabinets</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- 7 -->
+      <div class="navbar">
+        <div class="dropdown">
+          <button class="dropbtn">
+            Bath
+            <i class="fa fa-caret-down"></i>
+          </button>
+          <div class="dropdown-content">
+            <div class="row">
+              <div class="col">
+                <h5>Bath Linens</h5>
+                <a href="#">bath Towel</a>
+                <a href="#">bath Towel Set</a>
+                <a href="#">bath rugs</a>
+                <a href="#">bath rugs sets</a>
+              </div>
+              <div class="col">
+                <h5>Showers</h5>
+                <a href="#">shower curtains</a>
+                <a href="#">shower liners</a>
+                <a href="#">shower mats</a>
+                <a href="#">shower hooks/rods</a>
+                <a href="#">shower heeds</a>
+              </div>
+              <div class="col">
+                <h5>Bath Hardware</h5>
+                <a href="#">towel bar</a>
+                <a href="#">towel rigs</a>
+                <a href="#">towel holder</a>
+                <a href="#">towel warmers</a>
+                <a href="#">towel hooks</a>
+                <a href="#">towel knob&pull</a>
+              </div>
+              <div class="col">
+                <h5>Bath Furniture</h5>
+                <a href="#">bathroom shelvings</a>
+                <a href="#">makeup vanity</a>
+                <a href="#">bathroom seatings</a>
+                <a href="#">floor cabinets</a>
+                <a href="#">well cabinets</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- 8-->
+      <div class="navbar">
+        <div class="dropdown">
+          <button class="dropbtn">
+            Bath
+            <i class="fa fa-caret-down"></i>
+          </button>
+          <div class="dropdown-content">
+            <div class="row">
+              <div class="col">
+                <h5>Bath Linens</h5>
+                <a href="#">bath Towel</a>
+                <a href="#">bath Towel Set</a>
+                <a href="#">bath rugs</a>
+                <a href="#">bath rugs sets</a>
+              </div>
+              <div class="col">
+                <h5>Showers</h5>
+                <a href="#">shower curtains</a>
+                <a href="#">shower liners</a>
+                <a href="#">shower mats</a>
+                <a href="#">shower hooks/rods</a>
+                <a href="#">shower heeds</a>
+              </div>
+              <div class="col">
+                <h5>Bath Hardware</h5>
+                <a href="#">towel bar</a>
+                <a href="#">towel rigs</a>
+                <a href="#">towel holder</a>
+                <a href="#">towel warmers</a>
+                <a href="#">towel hooks</a>
+                <a href="#">towel knob&pull</a>
+              </div>
+              <div class="col">
+                <h5>Bath Furniture</h5>
+                <a href="#">bathroom shelvings</a>
+                <a href="#">makeup vanity</a>
+                <a href="#">bathroom seatings</a>
+                <a href="#">floor cabinets</a>
+                <a href="#">well cabinets</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- 9-->
+      <div class="navbar">
+        <div class="dropdown">
+          <button class="dropbtn">
+            Bath
+            <i class="fa fa-caret-down"></i>
+          </button>
+          <div class="dropdown-content">
+            <div class="row">
+              <div class="col">
+                <h5>Bath Linens</h5>
+                <a href="#">bath Towel</a>
+                <a href="#">bath Towel Set</a>
+                <a href="#">bath rugs</a>
+                <a href="#">bath rugs sets</a>
+              </div>
+              <div class="col">
+                <h5>Showers</h5>
+                <a href="#">shower curtains</a>
+                <a href="#">shower liners</a>
+                <a href="#">shower mats</a>
+                <a href="#">shower hooks/rods</a>
+                <a href="#">shower heeds</a>
+              </div>
+              <div class="col">
+                <h5>Bath Hardware</h5>
+                <a href="#">towel bar</a>
+                <a href="#">towel rigs</a>
+                <a href="#">towel holder</a>
+                <a href="#">towel warmers</a>
+                <a href="#">towel hooks</a>
+                <a href="#">towel knob&pull</a>
+              </div>
+              <div class="col">
+                <h5>Bath Furniture</h5>
+                <a href="#">bathroom shelvings</a>
+                <a href="#">makeup vanity</a>
+                <a href="#">bathroom seatings</a>
+                <a href="#">floor cabinets</a>
+                <a href="#">well cabinets</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- 10-->
+      <div class="navbar">
+        <div class="dropdown">
+          <button class="dropbtn">
+            Bath
+            <i class="fa fa-caret-down"></i>
+          </button>
+          <div class="dropdown-content">
+            <div class="row">
+              <div class="col">
+                <h5>Bath Linens</h5>
+                <a href="#">bath Towel</a>
+                <a href="#">bath Towel Set</a>
+                <a href="#">bath rugs</a>
+                <a href="#">bath rugs sets</a>
+              </div>
+              <div class="col">
+                <h5>Showers</h5>
+                <a href="#">shower curtains</a>
+                <a href="#">shower liners</a>
+                <a href="#">shower mats</a>
+                <a href="#">shower hooks/rods</a>
+                <a href="#">shower heeds</a>
+              </div>
+              <div class="col">
+                <h5>Bath Hardware</h5>
+                <a href="#">towel bar</a>
+                <a href="#">towel rigs</a>
+                <a href="#">towel holder</a>
+                <a href="#">towel warmers</a>
+                <a href="#">towel hooks</a>
+                <a href="#">towel knob&pull</a>
+              </div>
+              <div class="col">
+                <h5>Bath Furniture</h5>
+                <a href="#">bathroom shelvings</a>
+                <a href="#">makeup vanity</a>
+                <a href="#">bathroom seatings</a>
+                <a href="#">floor cabinets</a>
+                <a href="#">well cabinets</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <hr />
+    <!--First Image----->
+    <div
+      style="
+        margin: auto;
+        display: flex;
+        justify-content: space-around;
+        margin-top: 20px;
+      "
+    >
+      <img
+        width="80%"
+        src="https://b3h2.scene7.com/is/image/BedBathandBeyond/2023-01-10-12-35-38-FY22-FW35-0103-US-Dont-Miss-Deals-With-CTA-C01-19-DSK?$content$&wid=1280&hei=300"
+        alt=""
+      />
+    </div>
+    <div style="text-align: center">
+      <p>
+        Valid thru 1/22. Assortment varies by store. Reward points are valid for
+        Welcome Rewards™ members only. Exclusions apply.
+      </p>
+    </div>
+    <!-- Card Slider -->
+    <div id="body">
+      <section class="swiper mySwiper">
+        <div class="swiper-wrapper">
+          <div class="card swiper-slide">
+            <div class="card_image">
+              <img src="../Media/woman-3633737__340.jpg" alt="" />
+            </div>
+            <div class="card_content">
+              <span class="card_title">Web Designer</span>
+              <span class="card_name">Roser</span>
+              <p class="card_text">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.Tempore,
+                veritatis odio.
+              </p>
+              <button class="card_btn">View More</button>
+            </div>
+          </div>
+          <!-- 2 -->
+
+          <div class="card swiper-slide">
+            <div class="card_image">
+              <img src="../Media/woman-3633737__340.jpg" alt="" />
+            </div>
+            <div class="card_content">
+              <span class="card_title">Web Designer</span>
+              <span class="card_name">Roser</span>
+              <p class="card_text">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.Tempore,
+                veritatis odio.
+              </p>
+              <button class="card_btn">View More</button>
+            </div>
+          </div>
+          <!-- 3 -->
+
+          <div class="card swiper-slide">
+            <div class="card_image">
+              <img src="../Media/woman-3633737__340.jpg" alt="" />
+            </div>
+            <div class="card_content">
+              <span class="card_title">Web Designer</span>
+              <span class="card_name">Roser</span>
+              <p class="card_text">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.Tempore,
+                veritatis odio.
+              </p>
+              <button class="card_btn">View More</button>
+            </div>
+          </div>
+
+          <!-- 4 -->
+
+          <div class="card swiper-slide">
+            <div class="card_image">
+              <img src="../Media/woman-3633737__340.jpg" alt="" />
+            </div>
+            <div class="card_content">
+              <span class="card_title">Web Designer</span>
+              <span class="card_name">Roser</span>
+              <p class="card_text">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.Tempore,
+                veritatis odio.
+              </p>
+              <button class="card_btn">View More</button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+    <!--Second Image----->
+    <div
+      style="
+        margin: auto;
+        display: flex;
+        justify-content: space-around;
+        margin-top: 20px;
+      "
+    >
+      <img
+        width="80%"
+        src="https://b3h2.scene7.com/is/image/BedBathandBeyond/2022-06-24-09-34-53-FY22-FW18-BBB-US-0630-Omni-BOPIS-Web-C01_19-DSK%20(1)%20(1)?$content$&wid=1280&hei=150"
+        alt=""
+      />
+    </div>
+    <div style="text-align: center">
+      <p>
+        Valid thru 1/22. Assortment varies by store. Reward points are valid for
+        Welcome Rewards™ members only. Exclusions apply.
+      </p>
+    </div>
+    <!--Third Image----->
+    <div
+      style="
+        margin: auto;
+        display: flex;
+        justify-content: space-around;
+        margin-top: 20px;
+      "
+    >
+      <img
+        width="80%"
+        src="https://b3h2.scene7.com/is/image/BedBathandBeyond/FY22-FW46-BBB-US-0119-SUSE-C01_19-DSK?$content$&wid=1280&hei=500"
+        alt=""
+      />
+    </div>
+    <!-- Three*One -->
+    <div id="three_one">
+      <div>
+        <img
+          width="100%"
+          src="https://b3h2.scene7.com/is/image/BedBathandBeyond/FW46-FY22-0108-0114-LARS-US-CAN-C15-12-V2-1-1?$content$&wid=675"
+          alt=""
+        />
+        <hr />
+        <a href="#">Select Bedding</a>
+      </div>
+      <div>
+        <img
+          width="100%"
+          src="https://b3h2.scene7.com/is/image/BedBathandBeyond/FW46-FY22-0108-0114-LARS-US-CAN-C15-12-V2-2-1?$content$&wid=675"
+          alt=""
+        />
+        <hr />
+        <a href="#">Select Bath</a>
+      </div>
+      <div>
+        <img
+          width="100%"
+          src="https://b3h2.scene7.com/is/image/BedBathandBeyond/FW46-FY22-0108-0114-LARS-US-CAN-C15-12-V2-3-1?$content$&wid=675"
+          alt=""
+        />
+        <hr />
+        <a href="#">Select Storage</a>
+      </div>
+      <br />
+    </div>
+    <br />
+    <br />
+    <div
+      style="
+        text-align: center;
+        color: rgb(17, 53, 94);
+        letter-spacing: 1px;
+        font-size: large;
+      "
+    >
+      <h1>winter savings spotlight</h1>
+    </div>
+    <!-- four*one -->
+    <div id="four_one">
+      <div>
+        <img
+          src="https://b3h2.scene7.com/is/image/BedBathandBeyond/FY22-FW48-US-0123-0129-WEB-HP-C15-12-V3-1-2?$content$&wid=480"
+          alt=""
+        />
+        <h3 style="color: rgb(17, 53, 94)">
+          <span style="color: red">save up to 50% </span> on must-haves!
+        </h3>
+        <br />
+        <p>Incredible prices on everything you need for home</p>
+      </div>
+      <div>
+        <img
+          src="https://b3h2.scene7.com/is/image/BedBathandBeyond/FY22-US-JanuaryOffers-Promo2-HP-WRplus-WEB-C15-12-V3-1?$content$&wid=480"
+          alt=""
+        />
+        <h3 style="color: rgb(17, 53, 94)">new members get $15 in rewards</h3>
+        <br />
+        <p>Incredible prices on everything you need for home</p>
+      </div>
+      <div>
+        <img
+          src="https://b3h2.scene7.com/is/image/BedBathandBeyond/00_00-HomeChef-Image-4-C15_12_v3-4across-IMAGE?$content$&wid=480"
+          alt=""
+        />
+        <h3 style="color: rgb(17, 53, 94)">save $120 on Home Chef</h3>
+        <br />
+        <p>Incredible prices on everything you need for home</p>
+      </div>
+      <div>
+        <img
+          src="https://b3h2.scene7.com/is/image/BedBathandBeyond/FY22-FW46-US-0108-0114-WEB-HP-C15-12-V3-3-1?$content$&wid=480"
+          alt=""
+        />
+        <h3 style="color: rgb(17, 53, 94)">
+          <span style="color: red">get $100 </span>in rewards!
+        </h3>
+        <br />
+        <p>Incredible prices on everything you need for home</p>
+      </div>
+    </div>
+    <!-- Fifth Image -->
+    <div
+      style="
+        margin: auto;
+        display: flex;
+        justify-content: space-around;
+        margin-top: 20px;
+      "
+    >
+      <img
+        width="80%"
+        src="https://b3h2.scene7.com/is/image/BedBathandBeyond/FY22-FW12-BBB-US-CA-0515-0521-WEB-C01_19-DSK-Clearance50?$content$&wid=1280&hei=200"
+        alt="#"
+      />
+    </div>
+    <!-- Four*One -->
+    <div id="four_one">
+      <div>
+        <img
+          src="https://b3h2.scene7.com/is/image/BedBathandBeyond/FY22-FW46-CA-0109-0114-WEB-HP2-C15-12-V3-8%20%28144aa6ce-e4ff-4367-96b7-11652ce143f9%29?$content$&wid=480"
+          alt=""
+        />
+        <h3 style="color: rgb(17, 53, 94)">
+          <span style="color: red">save $80 </span> on select cookware
+        </h3>
+        <br />
+      </div>
+      <div>
+        <img
+          src="https://b3h2.scene7.com/is/image/BedBathandBeyond/FY22-FW46-US-0108-0114-WEB-HP-C15-12-V3-5?$content$&wid=480"
+          alt=""
+        />
+        <h3 style="color: rgb(17, 53, 94)">
+          <span style="color: red">save up to $50</span>on Ninja appliances
+        </h3>
+        <br />
+      </div>
+      <div>
+        <img
+          src="https://b3h2.scene7.com/is/image/BedBathandBeyond/FY22-FW46-US-0108-0114-WEB-HP-C15-12-V3-6?$content$&wid=480"
+          alt=""
+        />
+        <h3 style="color: rgb(17, 53, 94)">
+          <span style="color: red">save $50 </span>on select KitchenAid stand
+          mixers
+        </h3>
+        <br />
+      </div>
+      <div>
+        <img
+          src="https://b3h2.scene7.com/is/image/BedBathandBeyond/FY22-FW46-US-0108-0114-WEB-HP-C15-12-V3-7?$content$&wid=480"
+          alt=""
+        />
+        <h3 style="color: rgb(17, 53, 94)">
+          <span style="color: red">save up to 20% </span>on Breville appliances
+        </h3>
+        <br />
+      </div>
+    </div>
+    <h1
+      style="
+        text-align: center;
+        color: rgb(17, 53, 94);
+        letter-spacing: 1px;
+        font-size: xx-large;
+      "
+    >
+      brew your way
+    </h1>
+    <!-- two_one -->
+    <div id="two_one">
+      <div>
+        <img
+          src="https://b3h2.scene7.com/is/image/BedBathandBeyond/FY22-FW46-US-0108-0114-WEB-HP-C15-12-V1-3?$content$&wid=945"
+          alt=""
+        />
+        <h4>coffee makers</h4>
+      </div>
+      <div>
+        <img
+          src="https://b3h2.scene7.com/is/image/BedBathandBeyond/FY22-FW46-US-0108-0114-WEB-HP-C15-12-V1-4?$content$&wid=945"
+          alt=""
+        />
+        <h4>Keurig K-cup pods 32-48ct</h4>
+      </div>
+    </div>
+
+    <div
+      style="
+        margin: auto;
+        display: flex;
+        justify-content: space-around;
+        margin-top: 20px;
+      "
+    >
+      <img
+        width="80%"
+        src="https://b3h2.scene7.com/is/image/BedBathandBeyond/FY22-0102-BBB-FW45-Valentines-Day-Shop-Web-Banner-DSK-1?$content$&wid=1280&hei=300"
+        alt=""
+      />
+    </div>
+    <h1
+      style="
+        text-align: center;
+        color: rgb(17, 53, 94);
+        letter-spacing: 1px;
+        font-size: xx-large;
+      "
+    >
+      tidy up & spend less
+    </h1>
+    <!-- Three_One -->
+    <div id="three_one">
+      <div>
+        <img
+          width="100%"
+          src="https://b3h2.scene7.com/is/image/BedBathandBeyond/FW46-FY22-0108-0114-LARS-US-C15-12-V2?$content$&wid=675"
+          alt=""
+        />
+        <hr />
+        <h3 style="color: rgb(17, 53, 94)">
+          <span style="color: red">save up to $100 </span>on Select Dyson
+          vacuums
+        </h3>
+      </div>
+      <div>
+        <img
+          width="100%"
+          src="https://b3h2.scene7.com/is/image/BedBathandBeyond/FY22-FW46-US-0108-0114-WEB-HP-C15-12-V2-1?$content$&wid=675"
+          alt=""
+        />
+        <hr />
+        <h3 style="color: rgb(17, 53, 94)">
+          <span style="color: red">save up to $50 </span>on select Shark vacuums
+        </h3>
+      </div>
+      <div>
+        <img
+          width="100%"
+          src="https://b3h2.scene7.com/is/image/BedBathandBeyond/FY22-FW46-US-0108-0114-WEB-HP-C15-12-V2-2-1?$content$&wid=675"
+          alt=""
+        />
+        <hr />
+        <h3 style="color: rgb(17, 53, 94)">OXO cleaning from 8.99</h3>
+      </div>
+      <br />
+    </div>
+
+    <h1
+      style="
+        text-align: center;
+        color: rgb(17, 53, 94);
+        letter-spacing: 1px;
+        font-size: xx-large;
+      "
+    >
+      welcome to shopping made easy
+    </h1>
+    <!-- Three_One -->
+    <div id="three_one">
+      <div>
+        <img
+          width="100%"
+          src="https://b3h2.scene7.com/is/image/BedBathandBeyond/FY22-FW28-US-CA-0905-WEB-HP-Holiday-C-15-12-V2-3-3?$content$&wid=675"
+          alt=""
+        />
+        <hr />
+        <br />
+        <p>Found a better price?We'll match it!</p>
+      </div>
+      <div>
+        <img
+          width="100%"
+          src="https://b3h2.scene7.com/is/image/BedBathandBeyond/FY22-FW28-US-CA-0905-WEB-HP-Holiday-C-15-12-V2-3-2?$content$&wid=675"
+          alt=""
+        />
+        <hr />
+        <br />
+        <p>Ready for free pickup in 1 hour or less</p>
+      </div>
+      <div>
+        <img
+          width="100%"
+          src="https://b3h2.scene7.com/is/image/BedBathandBeyond/FY22-FW28-US-CA-0905-WEB-HP-Holiday-C-15-12-V2-3-ALT-1?$content$&wid=675"
+          alt=""
+        />
+        <hr />
+        <br />
+        <p>Deliver right to your doorstep</p>
+      </div>
+      <br />
+    </div>
+
+    <div
+      style="
+        margin: auto;
+        display: flex;
+        justify-content: space-around;
+        margin-top: 20px;
+      "
+    >
+      <img
+        width="80%"
+        src="https://b3h2.scene7.com/is/image/BedBathandBeyond/FY22-FW46-BBB-US-CAN-1231-Outdoor-HP-C01_19_DSK?$content$&wid=1280&hei=300"
+        alt=""
+      />
+    </div>
+    <br /><br />
+    <h1
+      style="
+        text-align: center;
+        color: rgb(17, 53, 94);
+        letter-spacing: 1px;
+        font-size: xx-large;
+      "
+    >
+      top categories
+    </h1>
+    <br />
+    <!-- six three -->
+    <div id="six_three">
+      <div>
+        <a href="#"
+          ><img
+            src="https://b3h2.scene7.com/is/image/BedBathandBeyond/FY22-FW45-BBB-US-0106-WEB-HP-Valentines-C02-5-v1-1-DSK?$content$"
+            alt=""
+        /></a>
+        <p>Lorem ipsum</p>
+      </div>
+      <div>
+        <a href="#"
+          ><img
+            src="https://b3h2.scene7.com/is/image/BedBathandBeyond/standmixers_C02_5_1%20%281%29?$content$&wid=202&hei=202"
+            alt=""
+        /></a>
+        <p>Lorem ipsum</p>
+      </div>
+      <div>
+        <a href="#"
+          ><img
+            src="https://b3h2.scene7.com/is/image/BedBathandBeyond/2022-02-25-14-50_881334012804_01?$content$"
+            alt=""
+        /></a>
+        <p>Lorem ipsum</p>
+      </div>
+      <div>
+        <a href="#"
+          ><img
+            src="https://b3h2.scene7.com/is/image/BedBathandBeyond/444800389918_2_imageset?wid=240&hei=240"
+            alt=""
+        /></a>
+        <p>Lorem ipsum</p>
+      </div>
+      <div>
+        <a href="#"
+          ><img
+            src="https://b3h2.scene7.com/is/image/BedBathandBeyond/lf_299288668531133p_imageset?$content$"
+            alt=""
+        /></a>
+        <p>Lorem ipsum</p>
+      </div>
+      <div>
+        <a href="#"
+          ><img
+            src="https://b3h2.scene7.com/is/image/BedBathandBeyond/2020-07-06-16-05_1076267_imageset?$713$&wid=713&hei=713"
+            alt=""
+        /></a>
+        <p>Lorem ipsum</p>
+      </div>
+      <div>
+        <a href="#"
+          ><img
+            src="https://b3h2.scene7.com/is/image/BedBathandBeyond/FY22-FW3-BBB-US-0313-0319-Web-Bedding-C02_5_Module3?$content$"
+            alt=""
+        /></a>
+        <p>Lorem ipsum</p>
+      </div>
+      <div>
+        <a href="#"
+          ><img
+            src="https://b3h2.scene7.com/is/image/BedBathandBeyond/m-2021-12-29-17-25_BBB_CRC_202201_NW_Pima_Cot_Sateen_500_tc_Sheet_Set_007?$imagePLP$&wid=236&hei=236"
+            alt=""
+        /></a>
+        <p>Lorem ipsum</p>
+      </div>
+      <div>
+        <a href="#"
+          ><img
+            src="https://b3h2.scene7.com/is/image/BedBathandBeyond/2022-06-09-16-08_2_ugg_dawson_heatedthrw_chclt_pri_imageset?wid=529&hei=529"
+            alt=""
+        /></a>
+        <p>Lorem ipsum</p>
+      </div>
+      <div>
+        <a href="#"
+          ><img
+            src="https://b3h2.scene7.com/is/image/BedBathandBeyond/2021-10-01-11-04_042694402739_imageset?$713$&wid=713&hei=713"
+            alt=""
+        /></a>
+        <p>Lorem ipsum</p>
+      </div>
+      <div>
+        <a href="#"
+          ><img
+            src="https://b3h2.scene7.com/is/image/BedBathandBeyond/FEO_BBB_Homepage_10.31_C02.5_06?$content$"
+            alt=""
+        /></a>
+        <p>Lorem ipsum</p>
+      </div>
+      <div>
+        <a href="#"
+          ><img
+            src="https://b3h2.scene7.com/is/image/BedBathandBeyond/24359053258234m?$imagePLP$&wid=363&hei=363"
+            alt=""
+        /></a>
+        <p>Lorem ipsum</p>
+      </div>
+      <div>
+        <a href="#"
+          ><img
+            src="https://b3h2.scene7.com/is/image/BedBathandBeyond/2021-01-04-13-00_9550kd_2_imageset?$713$&wid=713&hei=713"
+            alt=""
+        /></a>
+        <p>Lorem ipsum</p>
+      </div>
+      <div>
+        <a href="#"
+          ><img
+            src="https://b3h2.scene7.com/is/image/BedBathandBeyond/lf_116523161083295p_imageset?$713$&wid=713&hei=713"
+            alt=""
+        /></a>
+        <p>Lorem ipsum</p>
+      </div>
+      <div>
+        <a href="#"
+          ><img
+            src="https://b3h2.scene7.com/is/image/BedBathandBeyond/2020-04-30-11-38_Velocity3_Front_imageset?$713$&wid=713&hei=713"
+            alt=""
+        /></a>
+        <p>Lorem ipsum</p>
+      </div>
+      <div>
+        <a href="#"
+          ><img
+            src="https://b3h2.scene7.com/is/image/BedBathandBeyond/2020-05-28-00-10_871407006922_imageset?$713$&wid=713&hei=713"
+            alt=""
+        /></a>
+        <p>Lorem ipsum</p>
+      </div>
+      <div>
+        <a href="#"
+          ><img
+            src="https://b3h2.scene7.com/is/image/BedBathandBeyond/444800460440_imageset?$713$&wid=713&hei=713"
+            alt=""
+        /></a>
+        <p>Lorem ipsum</p>
+      </div>
+      <div>
+        <a href="#"
+          ><img
+            src="https://b3h2.scene7.com/is/image/BedBathandBeyond/US-FW18-FY20-0628-0704-WEB-HomeDecor-C02-5-12?$content$"
+            alt=""
+        /></a>
+        <p>Lorem ipsum</p>
+      </div>
+    </div>
+    <br><br><br>
+    <h1
+    style="
+      text-align: center;
+      color: rgb(17, 53, 94);
+      letter-spacing: 1px;
+      font-size: xx-large;
+    "
+  >
+    just for you
+  </h1>
+  <br>
+    <div class="crousel">
+      <div><i class="fa-solid fa-angle-left" id="left_crousel1"></i></div>
+      <div class="crousel_div1">
+      </div>
+      <div><i class="fa-solid fa-angle-right" id="right_crousel1"></i></div>
+    </div>
+    <br><br><br>
+    <h1
+    style="
+      text-align: center;
+      color: rgb(17, 53, 94);
+      letter-spacing: 1px;
+      font-size: xx-large;
+    "
+  >
+    recently reviewed
+  </h1>
+  <br>
+    <div class="crousel">
+      <div><i class="fa-solid fa-angle-left" id="left_crousel2"></i></div>
+      <div class="crousel_div2">
+      </div>
+      <div><i class="fa-solid fa-angle-right" id="right_crousel2"></i></div>
     </div>
   </body>
 </html>
-<script src="../SCRIPT/index.js"></script>
+<script src="../javascript/index.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+<script src="../javascript/cardSlider.js"></script>
+<script src="../javascript/crousel.js"></script>
