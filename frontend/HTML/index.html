@@ -14,11 +14,7 @@
     <link rel="stylesheet" href="../style/dropdown.css" />
     <link rel="stylesheet" href="../style/leftDropDown.css" />
     <link rel="stylesheet" href="../style/crousel.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"
-    />
-    <link rel="stylesheet" href="../style/cardSlider.css" />
+    <link rel="stylesheet" href="../style/popup.css">
   </head>
   <body>
     <!---------- Top red Bar ----------->
@@ -86,6 +82,7 @@
           placeholder="🔍 What product can we help you find?"
         />
       </div>
+      <a href="../HTML/register.html">signin</a>
       <i class="fa-solid fa-cart-shopping"></i>
     </div>
     <!--------------------Pop Up -------------------------->
@@ -572,75 +569,7 @@
       </p>
     </div>
     <!-- Card Slider -->
-    <div id="body">
-      <section class="swiper mySwiper">
-        <div class="swiper-wrapper">
-          <div class="card swiper-slide">
-            <div class="card_image">
-              <img src="../Media/woman-3633737__340.jpg" alt="" />
-            </div>
-            <div class="card_content">
-              <span class="card_title">Web Designer</span>
-              <span class="card_name">Roser</span>
-              <p class="card_text">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.Tempore,
-                veritatis odio.
-              </p>
-              <button class="card_btn">View More</button>
-            </div>
-          </div>
-          <!-- 2 -->
 
-          <div class="card swiper-slide">
-            <div class="card_image">
-              <img src="../Media/woman-3633737__340.jpg" alt="" />
-            </div>
-            <div class="card_content">
-              <span class="card_title">Web Designer</span>
-              <span class="card_name">Roser</span>
-              <p class="card_text">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.Tempore,
-                veritatis odio.
-              </p>
-              <button class="card_btn">View More</button>
-            </div>
-          </div>
-          <!-- 3 -->
-
-          <div class="card swiper-slide">
-            <div class="card_image">
-              <img src="../Media/woman-3633737__340.jpg" alt="" />
-            </div>
-            <div class="card_content">
-              <span class="card_title">Web Designer</span>
-              <span class="card_name">Roser</span>
-              <p class="card_text">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.Tempore,
-                veritatis odio.
-              </p>
-              <button class="card_btn">View More</button>
-            </div>
-          </div>
-
-          <!-- 4 -->
-
-          <div class="card swiper-slide">
-            <div class="card_image">
-              <img src="../Media/woman-3633737__340.jpg" alt="" />
-            </div>
-            <div class="card_content">
-              <span class="card_title">Web Designer</span>
-              <span class="card_name">Roser</span>
-              <p class="card_text">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.Tempore,
-                veritatis odio.
-              </p>
-              <button class="card_btn">View More</button>
-            </div>
-          </div>
-        </div>
-      </section>
-    </div>
     <!--Second Image----->
     <div
       style="
@@ -1129,41 +1058,48 @@
         <p>Lorem ipsum</p>
       </div>
     </div>
-    <br><br><br>
+    <br /><br /><br />
     <h1
-    style="
-      text-align: center;
-      color: rgb(17, 53, 94);
-      letter-spacing: 1px;
-      font-size: xx-large;
-    "
-  >
-    just for you
-  </h1>
-  <br>
+      style="
+        text-align: center;
+        color: rgb(17, 53, 94);
+        letter-spacing: 1px;
+        font-size: xx-large;
+      "
+    >
+      just for you
+    </h1>
+    <br />
     <div class="crousel">
       <div><i class="fa-solid fa-angle-left" id="left_crousel1"></i></div>
-      <div class="crousel_div1">
-      </div>
+      <div class="crousel_div1"></div>
       <div><i class="fa-solid fa-angle-right" id="right_crousel1"></i></div>
     </div>
-    <br><br><br>
+    <br /><br /><br />
     <h1
-    style="
-      text-align: center;
-      color: rgb(17, 53, 94);
-      letter-spacing: 1px;
-      font-size: xx-large;
-    "
-  >
-    recently reviewed
-  </h1>
-  <br>
+      style="
+        text-align: center;
+        color: rgb(17, 53, 94);
+        letter-spacing: 1px;
+        font-size: xx-large;
+      "
+    >
+      recently reviewed
+    </h1>
+    <br />
     <div class="crousel">
       <div><i class="fa-solid fa-angle-left" id="left_crousel2"></i></div>
-      <div class="crousel_div2">
-      </div>
+      <div class="crousel_div2"></div>
       <div><i class="fa-solid fa-angle-right" id="right_crousel2"></i></div>
+    </div>
+
+    <!-- Create the modal container -->
+    <button id="open-modal">🌐 ADMIN</button>
+    <div id="modal" class="hidden">
+      <div class="modal-content">
+        <span id="close-modal">&times;</span>
+        <a href="../Admin/register.html">Admin Register</a>
+      </div>
     </div>
   </body>
 </html>
@@ -1171,3 +1107,4 @@
 <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
 <script src="../javascript/cardSlider.js"></script>
 <script src="../javascript/crousel.js"></script>
+<script src="../javascript/popup.js"></script>

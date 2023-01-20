@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="register">
+      <input type="text" id="name" placeholder="Enter Name" />
+      <input type="email" id="email" placeholder="Email" />
+      <input type="password" id="password" placeholder="Password" />
+      <input type="text" id="specialkey" placeholder="Enter SpecialKey" />
+      <input type="submit" id="btn" />
+    </div>
+  </body>
+</html>
+
+<script>
+  let bag = [];
+  let btn = document.getElementById("btn");
+
+  btn.addEventListener("click", async function () {
+    let name = document.getElementById("name").value;
+    let email = document.getElementById("email").value;
+    let password = document.getElementById("password").value;
+    let specialkey = document.getElementById("specialkey").value;
+    let registerData = {
+      name,
+      email,
+      password,
+      specialkey
+    };
+    bag = { ...registerData };
+    const res = await fetch("http://localhost:8080/admin/signup", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(bag),
+    });
+    const data=await res.json();
+    if(res.ok){
+      alert(data);
+    }
+  });
+
+</script>
