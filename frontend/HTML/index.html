@@ -14,11 +14,11 @@
     <link rel="stylesheet" href="../style/dropdown.css" />
     <link rel="stylesheet" href="../style/leftDropDown.css" />
     <link rel="stylesheet" href="../style/crousel.css" />
+    <link rel="stylesheet" href="../style/popup.css" />
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"
     />
-    <link rel="stylesheet" href="../style/cardSlider.css" />
   </head>
   <body>
     <!---------- Top red Bar ----------->
@@ -67,7 +67,7 @@
         >
       </div>
     </div>
-    <!-- Search Bar  -->
+    <!-- Side Drop Down -->
     <div id="mySidenav" class="sidenav">
       <div class="nav-icon" onclick="closeNav()">
         <i id="closebtn" class="fa-solid fa-xmark"></i>
@@ -76,7 +76,7 @@
       <a href="#">About</a>
       <a href="#">Contact</a>
     </div>
-
+    <!-- Search Bar  -->
     <div id="search_bar">
       <i class="fa-solid fa-bars nav-icon" onclick="openNav()"></i>
       <img src="../Media/logo1.png" alt="#" />
@@ -86,470 +86,36 @@
           placeholder="🔍 What product can we help you find?"
         />
       </div>
+      <a style="text-decoration:none; color:rgb(56, 86, 122);" href="../HTML/register.html">signin</a>
       <i class="fa-solid fa-cart-shopping"></i>
     </div>
-    <!--------------------Pop Up -------------------------->
+    <!--------------------Pop Up CSS in Index.css -------------------------->
     <!-- <div id="popup">
       <div id="popup-content">
-        <p>Welcome to my website!</p>
-        <button onclick="closePopup()">Close</button>
+        <img width="20%" src="../Media/logo2.png" alt="" />
+        <br />
+        <p>special offers!</p>
+        <h3>20% off Single item</h3>
+        <br />
+        <input type="text" placeholder="* Email" />
+        <button>get offer</button>
+        <br /><br />
+        <p class="miniature">
+          *Offer available to new subscribers Exclusions apply.
+        </p>
+        <p class="miniature">
+          For information on our privacy practices, please visit our Privacy
+          policy. California residents: view our Notice of Financial Incentive.
+        </p>
+        <br />
+        <i class="fa-regular fa-circle-xmark" onclick="closePopup()"></i>
       </div>
     </div> -->
 
     <!--------------------- DropDown Menu --------------------->
-    <!-- 1 -->
-    <div style="display: flex">
-      <div class="navbar">
-        <div class="dropdown">
-          <button class="dropbtn">
-            Bedding
-            <i class="fa fa-caret-down"></i>
-          </button>
-          <div class="dropdown-content">
-            <div class="row">
-              <div class="col">
-                <h5>Bedding</h5>
-                <a href="#">comforter sets</a>
-                <a href="#">bed in a bag</a>
-                <a href="#">duvet cover</a>
-                <a href="#">quilts</a>
-                <a href="#">kids bedding</a>
-              </div>
-              <div class="col">
-                <h5>Sheets</h5>
-                <a href="#">sheet sets</a>
-                <a href="#">flannel sheets</a>
-                <a href="#">fitted sheets</a>
-                <a href="#">flat sheets</a>
-                <a href="#">pillowcases</a>
-              </div>
-              <div class="col">
-                <h5>Bedding basics</h5>
-                <a href="#">mattress pads</a>
-                <a href="#">mattress toppers</a>
-                <a href="#">mattress protectors</a>
-                <a href="">pillow protectors</a>
-                <a href="">alternative comforters</a>
-              </div>
-              <div class="col">
-                <h5>Pillows</h5>
-                <a href="#">bed pillows</a>
-                <a href="#">throw pillows</a>
-                <a href="#">support pillows</a>
-                <a href="#">canopis</a>
-                <a href="#">air mattresses</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- 2 -->
-      <div class="navbar">
-        <div class="dropdown">
-          <button class="dropbtn">
-            Bath
-            <i class="fa fa-caret-down"></i>
-          </button>
-          <div class="dropdown-content">
-            <div class="row">
-              <div class="col">
-                <h5>Bath Linens</h5>
-                <a href="#">bath Towel</a>
-                <a href="#">bath Towel Set</a>
-                <a href="#">bath rugs</a>
-                <a href="#">bath rugs sets</a>
-              </div>
-              <div class="col">
-                <h5>Showers</h5>
-                <a href="#">shower curtains</a>
-                <a href="#">shower liners</a>
-                <a href="#">shower mats</a>
-                <a href="#">shower hooks/rods</a>
-                <a href="#">shower heeds</a>
-              </div>
-              <div class="col">
-                <h5>Bath Hardware</h5>
-                <a href="#">towel bar</a>
-                <a href="#">towel rigs</a>
-                <a href="#">towel holder</a>
-                <a href="#">towel warmers</a>
-                <a href="#">towel hooks</a>
-                <a href="#">towel knob&pull</a>
-              </div>
-              <div class="col">
-                <h5>Bath Furniture</h5>
-                <a href="#">bathroom shelvings</a>
-                <a href="#">makeup vanity</a>
-                <a href="#">bathroom seatings</a>
-                <a href="#">floor cabinets</a>
-                <a href="#">well cabinets</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- 3 -->
-      <div class="navbar">
-        <div class="dropdown">
-          <button class="dropbtn">
-            Bath
-            <i class="fa fa-caret-down"></i>
-          </button>
-          <div class="dropdown-content">
-            <div class="row">
-              <div class="col">
-                <h5>Bath Linens</h5>
-                <a href="#">bath Towel</a>
-                <a href="#">bath Towel Set</a>
-                <a href="#">bath rugs</a>
-                <a href="#">bath rugs sets</a>
-              </div>
-              <div class="col">
-                <h5>Showers</h5>
-                <a href="#">shower curtains</a>
-                <a href="#">shower liners</a>
-                <a href="#">shower mats</a>
-                <a href="#">shower hooks/rods</a>
-                <a href="#">shower heeds</a>
-              </div>
-              <div class="col">
-                <h5>Bath Hardware</h5>
-                <a href="#">towel bar</a>
-                <a href="#">towel rigs</a>
-                <a href="#">towel holder</a>
-                <a href="#">towel warmers</a>
-                <a href="#">towel hooks</a>
-                <a href="#">towel knob&pull</a>
-              </div>
-              <div class="col">
-                <h5>Bath Furniture</h5>
-                <a href="#">bathroom shelvings</a>
-                <a href="#">makeup vanity</a>
-                <a href="#">bathroom seatings</a>
-                <a href="#">floor cabinets</a>
-                <a href="#">well cabinets</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- 4 -->
-      <div class="navbar">
-        <div class="dropdown">
-          <button class="dropbtn">
-            Bath
-            <i class="fa fa-caret-down"></i>
-          </button>
-          <div class="dropdown-content">
-            <div class="row">
-              <div class="col">
-                <h5>Bath Linens</h5>
-                <a href="#">bath Towel</a>
-                <a href="#">bath Towel Set</a>
-                <a href="#">bath rugs</a>
-                <a href="#">bath rugs sets</a>
-              </div>
-              <div class="col">
-                <h5>Showers</h5>
-                <a href="#">shower curtains</a>
-                <a href="#">shower liners</a>
-                <a href="#">shower mats</a>
-                <a href="#">shower hooks/rods</a>
-                <a href="#">shower heeds</a>
-              </div>
-              <div class="col">
-                <h5>Bath Hardware</h5>
-                <a href="#">towel bar</a>
-                <a href="#">towel rigs</a>
-                <a href="#">towel holder</a>
-                <a href="#">towel warmers</a>
-                <a href="#">towel hooks</a>
-                <a href="#">towel knob&pull</a>
-              </div>
-              <div class="col">
-                <h5>Bath Furniture</h5>
-                <a href="#">bathroom shelvings</a>
-                <a href="#">makeup vanity</a>
-                <a href="#">bathroom seatings</a>
-                <a href="#">floor cabinets</a>
-                <a href="#">well cabinets</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- 5 -->
-      <div class="navbar">
-        <div class="dropdown">
-          <button class="dropbtn">
-            Bath
-            <i class="fa fa-caret-down"></i>
-          </button>
-          <div class="dropdown-content">
-            <div class="row">
-              <div class="col">
-                <h5>Bath Linens</h5>
-                <a href="#">bath Towel</a>
-                <a href="#">bath Towel Set</a>
-                <a href="#">bath rugs</a>
-                <a href="#">bath rugs sets</a>
-              </div>
-              <div class="col">
-                <h5>Showers</h5>
-                <a href="#">shower curtains</a>
-                <a href="#">shower liners</a>
-                <a href="#">shower mats</a>
-                <a href="#">shower hooks/rods</a>
-                <a href="#">shower heeds</a>
-              </div>
-              <div class="col">
-                <h5>Bath Hardware</h5>
-                <a href="#">towel bar</a>
-                <a href="#">towel rigs</a>
-                <a href="#">towel holder</a>
-                <a href="#">towel warmers</a>
-                <a href="#">towel hooks</a>
-                <a href="#">towel knob&pull</a>
-              </div>
-              <div class="col">
-                <h5>Bath Furniture</h5>
-                <a href="#">bathroom shelvings</a>
-                <a href="#">makeup vanity</a>
-                <a href="#">bathroom seatings</a>
-                <a href="#">floor cabinets</a>
-                <a href="#">well cabinets</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- 6 -->
-      <div class="navbar">
-        <div class="dropdown">
-          <button class="dropbtn">
-            Bath
-            <i class="fa fa-caret-down"></i>
-          </button>
-          <div class="dropdown-content">
-            <div class="row">
-              <div class="col">
-                <h5>Bath Linens</h5>
-                <a href="#">bath Towel</a>
-                <a href="#">bath Towel Set</a>
-                <a href="#">bath rugs</a>
-                <a href="#">bath rugs sets</a>
-              </div>
-              <div class="col">
-                <h5>Showers</h5>
-                <a href="#">shower curtains</a>
-                <a href="#">shower liners</a>
-                <a href="#">shower mats</a>
-                <a href="#">shower hooks/rods</a>
-                <a href="#">shower heeds</a>
-              </div>
-              <div class="col">
-                <h5>Bath Hardware</h5>
-                <a href="#">towel bar</a>
-                <a href="#">towel rigs</a>
-                <a href="#">towel holder</a>
-                <a href="#">towel warmers</a>
-                <a href="#">towel hooks</a>
-                <a href="#">towel knob&pull</a>
-              </div>
-              <div class="col">
-                <h5>Bath Furniture</h5>
-                <a href="#">bathroom shelvings</a>
-                <a href="#">makeup vanity</a>
-                <a href="#">bathroom seatings</a>
-                <a href="#">floor cabinets</a>
-                <a href="#">well cabinets</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- 7 -->
-      <div class="navbar">
-        <div class="dropdown">
-          <button class="dropbtn">
-            Bath
-            <i class="fa fa-caret-down"></i>
-          </button>
-          <div class="dropdown-content">
-            <div class="row">
-              <div class="col">
-                <h5>Bath Linens</h5>
-                <a href="#">bath Towel</a>
-                <a href="#">bath Towel Set</a>
-                <a href="#">bath rugs</a>
-                <a href="#">bath rugs sets</a>
-              </div>
-              <div class="col">
-                <h5>Showers</h5>
-                <a href="#">shower curtains</a>
-                <a href="#">shower liners</a>
-                <a href="#">shower mats</a>
-                <a href="#">shower hooks/rods</a>
-                <a href="#">shower heeds</a>
-              </div>
-              <div class="col">
-                <h5>Bath Hardware</h5>
-                <a href="#">towel bar</a>
-                <a href="#">towel rigs</a>
-                <a href="#">towel holder</a>
-                <a href="#">towel warmers</a>
-                <a href="#">towel hooks</a>
-                <a href="#">towel knob&pull</a>
-              </div>
-              <div class="col">
-                <h5>Bath Furniture</h5>
-                <a href="#">bathroom shelvings</a>
-                <a href="#">makeup vanity</a>
-                <a href="#">bathroom seatings</a>
-                <a href="#">floor cabinets</a>
-                <a href="#">well cabinets</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- 8-->
-      <div class="navbar">
-        <div class="dropdown">
-          <button class="dropbtn">
-            Bath
-            <i class="fa fa-caret-down"></i>
-          </button>
-          <div class="dropdown-content">
-            <div class="row">
-              <div class="col">
-                <h5>Bath Linens</h5>
-                <a href="#">bath Towel</a>
-                <a href="#">bath Towel Set</a>
-                <a href="#">bath rugs</a>
-                <a href="#">bath rugs sets</a>
-              </div>
-              <div class="col">
-                <h5>Showers</h5>
-                <a href="#">shower curtains</a>
-                <a href="#">shower liners</a>
-                <a href="#">shower mats</a>
-                <a href="#">shower hooks/rods</a>
-                <a href="#">shower heeds</a>
-              </div>
-              <div class="col">
-                <h5>Bath Hardware</h5>
-                <a href="#">towel bar</a>
-                <a href="#">towel rigs</a>
-                <a href="#">towel holder</a>
-                <a href="#">towel warmers</a>
-                <a href="#">towel hooks</a>
-                <a href="#">towel knob&pull</a>
-              </div>
-              <div class="col">
-                <h5>Bath Furniture</h5>
-                <a href="#">bathroom shelvings</a>
-                <a href="#">makeup vanity</a>
-                <a href="#">bathroom seatings</a>
-                <a href="#">floor cabinets</a>
-                <a href="#">well cabinets</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- 9-->
-      <div class="navbar">
-        <div class="dropdown">
-          <button class="dropbtn">
-            Bath
-            <i class="fa fa-caret-down"></i>
-          </button>
-          <div class="dropdown-content">
-            <div class="row">
-              <div class="col">
-                <h5>Bath Linens</h5>
-                <a href="#">bath Towel</a>
-                <a href="#">bath Towel Set</a>
-                <a href="#">bath rugs</a>
-                <a href="#">bath rugs sets</a>
-              </div>
-              <div class="col">
-                <h5>Showers</h5>
-                <a href="#">shower curtains</a>
-                <a href="#">shower liners</a>
-                <a href="#">shower mats</a>
-                <a href="#">shower hooks/rods</a>
-                <a href="#">shower heeds</a>
-              </div>
-              <div class="col">
-                <h5>Bath Hardware</h5>
-                <a href="#">towel bar</a>
-                <a href="#">towel rigs</a>
-                <a href="#">towel holder</a>
-                <a href="#">towel warmers</a>
-                <a href="#">towel hooks</a>
-                <a href="#">towel knob&pull</a>
-              </div>
-              <div class="col">
-                <h5>Bath Furniture</h5>
-                <a href="#">bathroom shelvings</a>
-                <a href="#">makeup vanity</a>
-                <a href="#">bathroom seatings</a>
-                <a href="#">floor cabinets</a>
-                <a href="#">well cabinets</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- 10-->
-      <div class="navbar">
-        <div class="dropdown">
-          <button class="dropbtn">
-            Bath
-            <i class="fa fa-caret-down"></i>
-          </button>
-          <div class="dropdown-content">
-            <div class="row">
-              <div class="col">
-                <h5>Bath Linens</h5>
-                <a href="#">bath Towel</a>
-                <a href="#">bath Towel Set</a>
-                <a href="#">bath rugs</a>
-                <a href="#">bath rugs sets</a>
-              </div>
-              <div class="col">
-                <h5>Showers</h5>
-                <a href="#">shower curtains</a>
-                <a href="#">shower liners</a>
-                <a href="#">shower mats</a>
-                <a href="#">shower hooks/rods</a>
-                <a href="#">shower heeds</a>
-              </div>
-              <div class="col">
-                <h5>Bath Hardware</h5>
-                <a href="#">towel bar</a>
-                <a href="#">towel rigs</a>
-                <a href="#">towel holder</a>
-                <a href="#">towel warmers</a>
-                <a href="#">towel hooks</a>
-                <a href="#">towel knob&pull</a>
-              </div>
-              <div class="col">
-                <h5>Bath Furniture</h5>
-                <a href="#">bathroom shelvings</a>
-                <a href="#">makeup vanity</a>
-                <a href="#">bathroom seatings</a>
-                <a href="#">floor cabinets</a>
-                <a href="#">well cabinets</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+
     <hr />
+
     <!--First Image----->
     <div
       style="
@@ -560,7 +126,7 @@
       "
     >
       <img
-        width="80%"
+        width="90%"
         src="https://b3h2.scene7.com/is/image/BedBathandBeyond/2023-01-10-12-35-38-FY22-FW35-0103-US-Dont-Miss-Deals-With-CTA-C01-19-DSK?$content$&wid=1280&hei=300"
         alt=""
       />
@@ -571,76 +137,14 @@
         Welcome Rewards™ members only. Exclusions apply.
       </p>
     </div>
-    <!-- Card Slider -->
-    <div id="body">
-      <section class="swiper mySwiper">
-        <div class="swiper-wrapper">
-          <div class="card swiper-slide">
-            <div class="card_image">
-              <img src="../Media/woman-3633737__340.jpg" alt="" />
-            </div>
-            <div class="card_content">
-              <span class="card_title">Web Designer</span>
-              <span class="card_name">Roser</span>
-              <p class="card_text">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.Tempore,
-                veritatis odio.
-              </p>
-              <button class="card_btn">View More</button>
-            </div>
-          </div>
-          <!-- 2 -->
-
-          <div class="card swiper-slide">
-            <div class="card_image">
-              <img src="../Media/woman-3633737__340.jpg" alt="" />
-            </div>
-            <div class="card_content">
-              <span class="card_title">Web Designer</span>
-              <span class="card_name">Roser</span>
-              <p class="card_text">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.Tempore,
-                veritatis odio.
-              </p>
-              <button class="card_btn">View More</button>
-            </div>
-          </div>
-          <!-- 3 -->
-
-          <div class="card swiper-slide">
-            <div class="card_image">
-              <img src="../Media/woman-3633737__340.jpg" alt="" />
-            </div>
-            <div class="card_content">
-              <span class="card_title">Web Designer</span>
-              <span class="card_name">Roser</span>
-              <p class="card_text">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.Tempore,
-                veritatis odio.
-              </p>
-              <button class="card_btn">View More</button>
-            </div>
-          </div>
-
-          <!-- 4 -->
-
-          <div class="card swiper-slide">
-            <div class="card_image">
-              <img src="../Media/woman-3633737__340.jpg" alt="" />
-            </div>
-            <div class="card_content">
-              <span class="card_title">Web Designer</span>
-              <span class="card_name">Roser</span>
-              <p class="card_text">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.Tempore,
-                veritatis odio.
-              </p>
-              <button class="card_btn">View More</button>
-            </div>
-          </div>
-        </div>
-      </section>
+<!-- hand made Crousel 3 -->
+    <br /><br><br>
+    <div class="crousel">
+      <div><i class="fa-solid fa-angle-left" id="left_crousel3"></i></div>
+      <div class="crousel_div3"></div>
+      <div><i class="fa-solid fa-angle-right" id="right_crousel3"></i></div>
     </div>
+
     <!--Second Image----->
     <div
       style="
@@ -651,7 +155,7 @@
       "
     >
       <img
-        width="80%"
+        width="90%"
         src="https://b3h2.scene7.com/is/image/BedBathandBeyond/2022-06-24-09-34-53-FY22-FW18-BBB-US-0630-Omni-BOPIS-Web-C01_19-DSK%20(1)%20(1)?$content$&wid=1280&hei=150"
         alt=""
       />
@@ -672,13 +176,13 @@
       "
     >
       <img
-        width="80%"
+        width="90%"
         src="https://b3h2.scene7.com/is/image/BedBathandBeyond/FY22-FW46-BBB-US-0119-SUSE-C01_19-DSK?$content$&wid=1280&hei=500"
         alt=""
       />
     </div>
     <!-- Three*One -->
-    <div id="three_one">
+    <div class="three_one">
       <div>
         <img
           width="100%"
@@ -773,7 +277,7 @@
       "
     >
       <img
-        width="80%"
+        width="90%"
         src="https://b3h2.scene7.com/is/image/BedBathandBeyond/FY22-FW12-BBB-US-CA-0515-0521-WEB-C01_19-DSK-Clearance50?$content$&wid=1280&hei=200"
         alt="#"
       />
@@ -859,7 +363,7 @@
       "
     >
       <img
-        width="80%"
+        width="90%"
         src="https://b3h2.scene7.com/is/image/BedBathandBeyond/FY22-0102-BBB-FW45-Valentines-Day-Shop-Web-Banner-DSK-1?$content$&wid=1280&hei=300"
         alt=""
       />
@@ -875,7 +379,7 @@
       tidy up & spend less
     </h1>
     <!-- Three_One -->
-    <div id="three_one">
+    <div class="three_one">
       <div>
         <img
           width="100%"
@@ -922,7 +426,7 @@
       welcome to shopping made easy
     </h1>
     <!-- Three_One -->
-    <div id="three_one">
+    <div class="three_one">
       <div>
         <img
           width="100%"
@@ -965,7 +469,7 @@
       "
     >
       <img
-        width="80%"
+        width="90%"
         src="https://b3h2.scene7.com/is/image/BedBathandBeyond/FY22-FW46-BBB-US-CAN-1231-Outdoor-HP-C01_19_DSK?$content$&wid=1280&hei=300"
         alt=""
       />
@@ -1129,45 +633,61 @@
         <p>Lorem ipsum</p>
       </div>
     </div>
-    <br><br><br>
+    <br /><br /><br />
+    <!-- Hand Made Crousel 1 -->
     <h1
-    style="
-      text-align: center;
-      color: rgb(17, 53, 94);
-      letter-spacing: 1px;
-      font-size: xx-large;
-    "
-  >
-    just for you
-  </h1>
-  <br>
+      style="
+        text-align: center;
+        color: rgb(17, 53, 94);
+        letter-spacing: 1px;
+        font-size: xx-large;
+      "
+    >
+      just for you
+    </h1>
+    <br />
     <div class="crousel">
       <div><i class="fa-solid fa-angle-left" id="left_crousel1"></i></div>
-      <div class="crousel_div1">
-      </div>
+      <div class="crousel_div1"></div>
       <div><i class="fa-solid fa-angle-right" id="right_crousel1"></i></div>
     </div>
-    <br><br><br>
+    <br /><br /><br />
+        <!-- Hand Made Crousel 2 -->
     <h1
-    style="
-      text-align: center;
-      color: rgb(17, 53, 94);
-      letter-spacing: 1px;
-      font-size: xx-large;
-    "
-  >
-    recently reviewed
-  </h1>
-  <br>
+      style="
+        text-align: center;
+        color: rgb(17, 53, 94);
+        letter-spacing: 1px;
+        font-size: xx-large;
+      "
+    >
+      recently reviewed
+    </h1>
+    <br />
     <div class="crousel">
       <div><i class="fa-solid fa-angle-left" id="left_crousel2"></i></div>
-      <div class="crousel_div2">
-      </div>
+      <div class="crousel_div2"></div>
       <div><i class="fa-solid fa-angle-right" id="right_crousel2"></i></div>
+    </div>
+
+    <!-- Admin Button -->
+    <button id="open-modal">🌐 ADMIN</button>
+    <div id="modal" class="hidden">
+      <div class="modal-content">
+        <span id="close-modal">&times;</span>
+        <div id="register">
+          <label for="">LOGIN</label>
+          <input type="email" id="admin_email" placeholder="* Email" />
+          <input type="password" id="admin_password" placeholder="* Password" />
+          <input type="submit" id="btn" />
+          <a href="../Admin/adminregister.html">Admin Register</a>
+        </div>
+      </div>
     </div>
   </body>
 </html>
 <script src="../javascript/index.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
-<script src="../javascript/cardSlider.js"></script>
 <script src="../javascript/crousel.js"></script>
+<script src="../javascript/popup.js"></script>
+<script src="../javascript/adminlogin.js"></script>

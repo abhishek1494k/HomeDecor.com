@@ -17,17 +17,17 @@
         overflow-x: hidden;
         transition: 0.5s;
         padding-top: 60px;
-        border:1px solid  rgb(17, 53, 94);
+        border:1px solid  rgb(56, 86, 122);
       }
 
       .sidenav a {
         padding: 8px 8px 8px 32px;
         text-decoration: none;
         font-size: 20px;
-        color:  rgb(17, 53, 94);
+        color:  rgb(56, 86, 122);
         display: block;
         transition: 0.3s;
-        border-bottom:1px solid  rgb(17, 53, 94);
+        border-bottom:1px solid rgb(56, 86, 122);
       }
 
       .sidenav a:hover {

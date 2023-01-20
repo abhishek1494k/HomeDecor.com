@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script
+    src="https://kit.fontawesome.com/d68d319f71.js"
+    crossorigin="anonymous"
+  ></script>
+    <style>
+      * {
+        background-color: rgb(221, 221, 221);
+      }
+      #container {
+        width: 50%;
+        height: auto;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        background-color: rgb(255, 255, 255);
+      }
+      #container div {
+        background-color: rgb(255, 255, 255);
+      }
+      #container div div,
+      #container div div input,
+      #container div div h2,
+      p,
+      label {
+        background-color: rgb(255, 255, 255);
+      }
+      #radio {
+        padding-left: 50px;
+        padding-right: 50px;
+      }
+      #inputs div {
+        border: 1px solid rgb(255, 255, 255);
+        display: flex;
+        flex-direction: column;
+        padding: 40px;
+        padding-top: 5px;
+      }
+      input {
+        padding: 20px;
+        margin: 5px;
+        border: 3px solid rgb(216, 216, 216);;
+      }
+      #btn {
+        padding: 15px;
+        color: rgb(255, 255, 255);
+        font-weight: 700;
+        letter-spacing: 2px;
+        outline: none;
+        border: none;
+        border-radius: 5px;
+      } 
+    </style>
+  </head>
+  <body>
+    <div >
+        <a style="text-decoration:none; color:rgb(56, 86, 122);" href="index.html"><i class="fa-solid fa-backward"></i> back</a>
+    </div>
+    <div id="container">
+      <div>
+        <img
+          width="100%"
+          src="https://b3h2.scene7.com/is/image/BedBathandBeyond/WR_deskstop_22_07_2022?$content$&wid=1280"
+          alt=""
+        />
+      </div>
+      <div id="inputs">
+        <div action="#">
+          <h2>create account</h2>
+          <input id="email" type="text" placeholder="* Enter Email" />
+          <input id="name" type="text" placeholder="* Enter Name" />
+          <input id="mob" type="tel" placeholder="* Enter Mobile No." />
+          <input id="password" type="text" placeholder="* Enter Password" />
+          <input
+            style="background-color: rgb(28, 84, 149)"
+            id="btn"
+            type="submit"
+            value="Create an Account"
+          />
+        </div>
+      </div>
+      <div id="radio">
+        <input type="radio" id="html" name="fav_language" value="HTML" />
+        <label for="html"
+          >Yes, add me to the Bed Bath & Beyond email list.</label
+        >
+        <hr />
+        <p>
+          By continuing you agree to enroll in and to the Terms of our Welcome
+          Rewards Program. For information on our privacy practices, please
+          visit our Privacy Policy. California residents: view our Notice of
+          Financial Incentive here
+        </p>
+      </div>
+    </div>
+  </body>
+</html>
+<script>
+  let bag = [];
+  let btn = document.getElementById("btn");
+
+  btn.addEventListener("click", async function () {
+    let name = document.getElementById("name").value;
+    let email = document.getElementById("email").value;
+    let password = document.getElementById("password").value;
+    let mob = document.getElementById("mob").value;
+    let registerData = {
+      name,
+      email,
+      mob,
+      password,
+    };
+    bag = { ...registerData };
+    const res = await fetch("http://localhost:8080/signup", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(bag),
+    });
+    const data=await res.json();
+    if(res.ok){
+      alert(data);
+      window.location.href="index.html"
+    }
+  });
+
+</script>
