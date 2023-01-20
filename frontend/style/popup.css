@@ -10,6 +10,7 @@
         height: 100%;
         background-color: rgba(0, 0, 0, 0.6);
         z-index: 10;
+        border-radius: 15px;
       }
 
       /* Define the modal content styles */
@@ -18,9 +19,11 @@
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
-        background-color: #fff;
-        padding: 20px;
+        background-color: rgb(56, 86, 122);
+        padding: 10px;
         text-align: center;
+        border-radius: 5px;
+        border: 1px solid white;
       }
 
       /* Define the close button styles */
@@ -49,8 +52,38 @@
       }
 
       #open-modal:hover{
-        background-color:  rgb(17, 53, 94);
+        background-color:  rgb(56, 86, 122);
         border-radius: 15px;
         color: white;
         padding: 10px;
+      }
+
+      .modal-content>#register{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        color:white;
+        padding-top: 50px;
+        padding-bottom: 50px;
+      }
+
+
+      .modal-content>#register>input{
+        margin:10px;
+        padding: 5px;
+        margin-right: 50px;
+        margin-left: 50px;
+      }
+      .modal-content>#register>#btn{
+        color: rgb(56, 86, 122);
+        background-color: white;
+        font-weight: 600;
+        border-radius: 10px;
+      }
+
+      .modal-content>#register a{
+        /* text-decoration: none; */
+        color: white;
+        text-decoration: underline;
+        font-size: x-small;
       }

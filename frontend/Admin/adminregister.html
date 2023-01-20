@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body{
+        background-color: rgb(214, 214, 214);
+      }
+      #register{
+        border:1px solid black;
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        align-items: center;
+        width: 40%;
+        margin: auto;
+        padding: 10px;
+        background-color: rgb(56, 86, 122);
+        color: white;
+        border-radius: 5px;
+        border:1px solid white;
+        padding-bottom: 20px;
+      }
+      #register input{
+        padding: 10px;
+        margin: 10px;
+        width: 50%;
+      }
+      #btn{
+        background-color: white;
+        color: rgb(56, 86, 122);
+        border: 10px;
+        border: none;
+        font-weight: 600;
+        border-radius: 10px;
+        transition: all 0.3s;
+        box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px, rgba(0, 0, 0, 0.1) 0px 2px 4px 0px, rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
+      }
+      #btn:hover{
+        background-color: rgb(56, 86, 122);
+        color:white;
+        border: 1px solid white;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="register">
+      <h2>Admin Registration</h2>
+      <input  type="text" id="name" placeholder="* Enter Name" required/>
+      <input type="email" id="email" placeholder="* Email" required />
+      <input required type="password" id="password" placeholder="* Password" />
+      <input required type="text" id="specialkey" placeholder="* Enter SpecialKey" />
+      <input style="width: 30%;" type="submit" id="btn" />
+    </div>
+  </body>
+</html>
+
+<script>
+  let bag = [];
+  let btn = document.getElementById("btn");
+
+  btn.addEventListener("click", async function () {
+    let name = document.getElementById("name").value;
+    let email = document.getElementById("email").value;
+    let password = document.getElementById("password").value;
+    let specialkey = document.getElementById("specialkey").value;
+    let registerData = {
+      name,
+      email,
+      password,
+      specialkey
+    };
+    bag = { ...registerData };
+    const res = await fetch("http://localhost:8080/admin/signup", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(bag),
+    });
+    const data=await res.json();
+    if(res.ok){
+      alert(data);
+      window.location.href="../HTML/index.html"
+    }else{
+      alert("Something Wrong")
+    }
+  });
+
+</script>

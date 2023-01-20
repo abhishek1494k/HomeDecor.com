@@ -23,8 +23,10 @@ adminRouter.post("/admin/signup", async (req, res) => {
           });
           await user.save();
           res.json("Admin Signup Successful");
+        } else if(specialkey===""){
+          res.json("Fill All Details");
         } else {
-          res.json("Wrong Admin Key");
+          res.json("Wrong Key");
         }
       }
     });
@@ -43,14 +45,15 @@ adminRouter.post("/admin/signin", async (req, res) => {
           const token = jwt.sign({ userID: user[0]._id }, process.env.key);
           res.send({ msg: "Admin Signin Successful",token:token });
         } else {
-          res.send("Wrong Credentials");
+          res.send({msg:"Wrong Credentials"});
         }
       });
     } else {
-      res.send("Wrong Credentials");
+      res.send({msg:"Wrong Credentials"});
     }
   } catch (e) {
     console.log("Err", e);
+    res.send({msg:"Wrong Credentials"});
   }
 });
 

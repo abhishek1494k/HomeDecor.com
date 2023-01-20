@@ -24,9 +24,9 @@
       #container div {
         background-color: rgb(255, 255, 255);
       }
-      #container div form,
-      #container div form input,
-      #container div form h2,
+      #container div div,
+      #container div div input,
+      #container div div h2,
       p,
       label {
         background-color: rgb(255, 255, 255);
@@ -35,7 +35,7 @@
         padding-left: 50px;
         padding-right: 50px;
       }
-      #inputs form {
+      #inputs div {
         border: 1px solid rgb(255, 255, 255);
         display: flex;
         flex-direction: column;
@@ -59,8 +59,8 @@
     </style>
   </head>
   <body>
-    <div>
-        <a href="index.html"><i class="fa-solid fa-backward"></i> back</a>
+    <div >
+        <a style="text-decoration:none; color:rgb(56, 86, 122);" href="index.html"><i class="fa-solid fa-backward"></i> back</a>
     </div>
     <div id="container">
       <div>
@@ -71,7 +71,7 @@
         />
       </div>
       <div id="inputs">
-        <form action="#">
+        <div action="#">
           <h2>create account</h2>
           <input id="email" type="text" placeholder="* Enter Email" />
           <input id="name" type="text" placeholder="* Enter Name" />
@@ -83,7 +83,7 @@
             type="submit"
             value="Create an Account"
           />
-        </form>
+        </div>
       </div>
       <div id="radio">
         <input type="radio" id="html" name="fav_language" value="HTML" />
@@ -101,3 +101,32 @@
     </div>
   </body>
 </html>
+<script>
+  let bag = [];
+  let btn = document.getElementById("btn");
+
+  btn.addEventListener("click", async function () {
+    let name = document.getElementById("name").value;
+    let email = document.getElementById("email").value;
+    let password = document.getElementById("password").value;
+    let mob = document.getElementById("mob").value;
+    let registerData = {
+      name,
+      email,
+      mob,
+      password,
+    };
+    bag = { ...registerData };
+    const res = await fetch("http://localhost:8080/signup", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(bag),
+    });
+    const data=await res.json();
+    if(res.ok){
+      alert(data);
+      window.location.href="index.html"
+    }
+  });
+
+</script>

@@ -11,19 +11,21 @@ userRouter.get("/", (req, res) => {
 });
 
 userRouter.post("/signup", async (req, res) => {
-  let { username, email, mob, password } = req.body;
+  let { name, email, mob, password } = req.body;
   try {
     bcrypt.hash(password, 5, async (err, hash) => {
       if (err) {
         console.log("err");
+        res.json("Error");
       } else {
-        const user = new UserModel({ username, email, mob, password: hash });
+        const user = new UserModel({ name, email, mob, password: hash });
         await user.save();
-        res.send("Signup Successful");
+        res.json("Signup Successful");
       }
     });
   } catch (e) {
     console.log("Err", e);
+    res.json("Error");
   }
 });
 

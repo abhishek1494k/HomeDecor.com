@@ -89,7 +89,7 @@ document.getElementById("right_crousel1").addEventListener("click", () => {
   }
 });
 
-
+//--------------------------------------------------2---------------------------------------------//
 let bigDiv2 = document.querySelector(".crousel_div2");
 function crousel2() {
   for (let i = 5; i < arr.length; i++) {
@@ -165,5 +165,83 @@ document.getElementById("right_crousel2").addEventListener("click", () => {
 
     div.append(img,h5,h6,rating);
     bigDiv2.append(div);
+  }
+});
+// --------------------------------------- 3------------------------------------------------//
+let bigDiv3 = document.querySelector(".crousel_div3");
+function crousel3() {
+  for (let i = 5; i < arr.length; i++) {
+    let div = document.createElement("div");
+
+    let img = document.createElement("img");
+    img.setAttribute("src", arr[i]);
+    img.setAttribute("width", "100%");
+
+    let h5=document.createElement("h5")
+    h5.innerText=`$${Number(Math.random()*20).toFixed(1)}`
+    h5.style.color="red";
+
+    let h6=document.createElement("h6")
+    h6.innerText=`Tim Hortons® Original`
+
+    let rating=document.createElement('p')
+    rating.innerHTML=`<i class="fa-solid fa-star" >${ Number(Math.random(1000)*1000).toFixed(0)}</i>`
+    // rating.innerText=Number(Math.random(1000)*1000).toFixed(0)
+
+    div.append(img,h5,h6,rating);
+    bigDiv3.append(div);
+  }
+}
+crousel3();
+
+document.getElementById("left_crousel3").addEventListener("click", () => {
+  console.log("left");
+  bigDiv3.innerHTML = "";
+  for (let i = 0; i < arr.length-5; i++) {
+    let div = document.createElement("div");
+
+    let img = document.createElement("img");
+    img.setAttribute("src", arr[i]);
+    img.setAttribute("width", "100%");
+
+    let h5=document.createElement("h5")
+    h5.innerText=`$${Number(Math.random()*20).toFixed(1)}`
+    h5.style.color="red";
+
+    let h6=document.createElement("h6")
+    h6.innerText=`Tim Hortons® Original`
+
+    let rating=document.createElement('p')
+    rating.innerHTML=`<i class="fa-solid fa-star" >${ Number(Math.random(1000)*1000).toFixed(0)}</i>`
+    // rating.innerText=Number(Math.random(1000)*1000).toFixed(0)
+
+    div.append(img,h5,h6,rating);
+    bigDiv3.append(div);
+  }
+});
+
+document.getElementById("right_crousel3").addEventListener("click", () => {
+  console.log("right");
+  bigDiv3.innerHTML = "";
+  for (let i = 5; i < arr.length; i++) {
+    let div = document.createElement("div");
+
+    let img = document.createElement("img");
+    img.setAttribute("src", arr[i]);
+    img.setAttribute("width", "100%");
+
+    let h5=document.createElement("h5")
+    h5.innerText=`$${Number(Math.random()*20).toFixed(1)}`
+    h5.style.color="red";
+
+    let h6=document.createElement("h6")
+    h6.innerText=`Tim Hortons® Original`
+
+    let rating=document.createElement('p')
+    rating.innerHTML=`<i class="fa-solid fa-star" >${ Number(Math.random(1000)*1000).toFixed(0)}</i>`
+    // rating.innerText=Number(Math.random(1000)*1000).toFixed(0)
+
+    div.append(img,h5,h6,rating);
+    bigDiv3.append(div);
   }
 });

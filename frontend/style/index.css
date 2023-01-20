@@ -33,13 +33,13 @@
 #top_blue {
   width: auto;
   display: flex;
-  background-color: rgb(17, 53, 94);
+  background-color: rgb(56, 86, 122);
 }
 #top_blue_left {
   width: 50%;
   display: flex;
   align-items: center;
-  border: 1px solid  rgb(17, 53, 94);
+  border: 1px solid  rgb(56, 86, 122);
 }
 #top_blue_left img,
 #top_blue_left a {
@@ -65,7 +65,7 @@
   text-decoration: none;
 }
 
-/*------------------------ Pop Up-------------------- */
+/*------------------------Reload Pop Up-------------------- */
 #popup {
   position: fixed;
   top: 0;
@@ -80,11 +80,41 @@
 }
 
 #popup-content {
-  background: white;
-  padding: 20px;
+  background: rgb(56, 86, 122);
   border-radius: 10px;
+  width:30%;
+  padding: 15px;
+  border: 1px solid rgb(255, 255, 255);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  align-items: center;
+  text-align: center;
 }
+.miniature{
+  font-size: xx-small;
+}
+#popup-content i{
+  background:  rgb(56, 86, 122);
+  color:white;
+  outline: none;
+  border: none;
+}
+#popup-content input{
+  padding:5px;
+  margin: 5px;
+  width: 80%;
+}
+#popup-content button{
+  padding:5px;
+  background-color: white;
+  color: black;
+  font-weight: 500;
+  border: none;
+  border-radius: 5px;
 
+}
 /* ------------Search Bar----------- */
 
 #search_bar {
@@ -112,10 +142,10 @@
 }
 #search_bar i {
   font-size: x-large;
-  color:  rgb(17, 53, 94);
+  color:  rgb(56, 86, 122);
 }
 
-#three_one {
+.three_one {
   width: 90%;
   margin: auto;
   margin-top: 20px;
@@ -124,23 +154,23 @@
   justify-content: space-evenly;
 }
 
-#three_one div{
+.three_one div{
   margin:10px;
 }
 
-#three_one div a{
+.three_one div a{
   font-weight: 600;
   text-decoration: none;
   margin-left: 20px;
-  color:  rgb(17, 53, 94);
+  color:  rgb(56, 86, 122);
 }
 
-#three_one div a:hover{
+.three_one div a:hover{
   text-decoration:line-through;
 }
-
+/* --------------------four _one---------------- */
 #four_one{
-  width: 90%;
+  width: 93%;
   margin: auto;
   margin-top: 1px;
   display: flex;
@@ -181,11 +211,14 @@ width: 100%;
 #two_one div h4{
   margin-left: 20px;
 }
-#three_one div h3{
+/* ------------three_one------------- */
+
+.three_one div h3{
   padding-left: 20px;
 }
+
 #six_three{
-  width:80%;
+  width:90%;
   margin: auto;
   display: grid;
   border:1px solid rgb(255, 255, 255);

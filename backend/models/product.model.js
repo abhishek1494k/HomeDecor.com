@@ -3,8 +3,6 @@ const mongoose=require('mongoose')
 const pdtSchema=mongoose.Schema({
     name:String,
     image:String,
-    image2:String,
-    image3:String,
     rating:Number,
     lowprice:Number,
     highprice:Number,
