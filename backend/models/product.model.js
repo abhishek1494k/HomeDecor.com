@@ -7,6 +7,7 @@ const pdtSchema=mongoose.Schema({
     lowprice:Number,
     highprice:Number,
     category:String,
+    quantity:Number,
     userID:String
 
 
