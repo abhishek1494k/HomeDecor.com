@@ -8,7 +8,7 @@ app.use(cors())
 const { userRouter } = require("./routes/user.route");
 app.use("/", userRouter);
 const { adminRouter } = require("./routes/admin.route");
-app.use("/", adminRouter);
+app.use("/admin", adminRouter);
 const { auth } = require("./middlewares/authenticator");
 app.use(auth)
 const { pdtRouter } = require("./routes/product.route");
