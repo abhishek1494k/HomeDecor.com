@@ -9,14 +9,14 @@ const { CartModel } = require("../models/cart.model");
 const cors=require("cors")
 cartRouter.use(cors())
 
-// cartRouter.get("/",async(req,res)=>{
-//     try{
-//         const pdt=await PdtModel.find()
-//         res.send(pdt)
-//     }catch(e){
-//         console.log('err',e);
-//     }
-// })
+cartRouter.get("/",async(req,res)=>{
+    try{
+        const pdt=await CartModel.find()
+        res.send(pdt)
+    }catch(e){
+        console.log('err',e);
+    }
+})
 
 // cartRouter.get("/category/:id",async(req,res)=>{
 //     try{
@@ -43,6 +43,15 @@ cartRouter.post("/",async(req,res)=>{
         const cart_pdt=new CartModel(payload)
         await cart_pdt.save()
         res.json('Product Added to Cart')
+    }catch(e){
+        console.log('err',e);
+    }
+})
+
+cartRouter.delete("/:id",async(req,res)=>{
+    try{
+        await CartModel.findByIdAndDelete({_id:req.params.id})
+        res.json('Product Deleted from Cart')
     }catch(e){
         console.log('err',e);
     }

@@ -34,6 +34,7 @@
       <div id="right_div_1">
         <div> <i class="fa-solid fa-magnifying-glass"></i>
           <input type="text" placeholder="CTRL K Search Anything...">
+          <a href="cart.html"><i style="color:black" class="fa-solid fa-cart-shopping"></i></a>
           <i class="fa-regular fa-circle-question"></i>
           <i class="fa-solid fa-bell"></i>
         </div>
@@ -50,7 +51,7 @@
 <script>
 
   let adminName=document.getElementById("adminName")
-  adminName.innerHTML=`<h5>Hello ${localStorage.getItem("username")}</h5>`
+  adminName.innerHTML=`<h5>Hello ${localStorage.getItem("username")|| ""}</h5>`
 
 
   document.getElementById("HomeDecor").addEventListener("click",()=>{
