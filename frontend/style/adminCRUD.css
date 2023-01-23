@@ -1,0 +1,220 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Courier New', Courier, monospace
+  }
+
+  #parent_div {
+    display: flex;
+  }
+
+  #left_div {
+    border: 1px solid rgb(221, 221, 221);
+    height: 100vh;
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+
+  #left_div_1 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border: 1px solid rgb(255, 255, 255);
+    padding: 10px;
+  }
+
+  #left_div_2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    border: 1px solid rgb(255, 255, 255);
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+
+  #left_div_2 button {
+    border: none;
+    outline: none;
+    background-color: white;
+    font-weight: 600;
+    padding: 8px 40px;
+  }
+
+  #left_div_2 button:hover {
+    background-color: rgb(215, 215, 215);
+  }
+
+  #left_div_2 div:hover {
+    background-color: rgb(215, 215, 215);
+  }
+
+  #left_div_2 div {
+    border: 1px solid rgb(255, 255, 255);
+    width: 100%;
+    margin: 5px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  #right_div {
+    border: 1px solid rgb(215, 215, 215);
+    height: auto;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  #right_div_1 {
+    border-bottom: 1px solid rgb(125, 12, 12);
+    padding: 5px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+  #right_div_1>div:first-child{
+    background-color: rgb(255, 255, 255);
+    width: 70%;
+    padding:5px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  #right_div_1>div:first-child>input{
+    width:60%;
+    border: none;
+  }
+
+  #right_div_2 {
+    padding-left: 40px;
+    padding-top: 40px;
+    padding-right: 40px;
+  }
+
+  #showAdd {
+    border: 1px solid black;
+    height: auto;
+    align-content: center;
+  }
+  #showAdd >#register>input {
+    font-size: small;
+    background-color: rgb(255, 255, 255);
+    padding: 5px;
+    font-size: small;
+    text-align: center;
+    margin: 5px;
+  }
+  #showAdd >#register>input:last-child{
+    background-color: rgb(56, 86, 122);
+    color: white;
+    font-weight: 700;
+  }
+  #showAdd >#register>input:last-child:hover{
+    background-color: rgb(174, 211, 255);
+    color: white;
+    font-weight: 700;
+  }
+
+  #showAdd>#register{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+
+  #showAll{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: auto;
+  }
+  #showAll>div{
+    border:1px solid rgb(220, 16, 16);
+    padding:10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  #showAll div img{
+    width: 100%;
+    border:1px solid rgb(0, 0, 0);
+  }
+  #showAll>div>div{
+    padding:2px;
+
+  }
+  #showAll>div>div:nth-child(3){
+    display: flex;
+    flex-direction: row;
+
+  }
+  
+  #showAll>div>div:nth-child(3)>h5:first-child{
+    color: red;
+  }
+
+  #showAll>div>div:last-child{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  #showUser>div{
+    border:1px solid black;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  #showUser>div>div>button{
+    transition: all 0.3s;
+    padding:5px;
+  }
+
+  #showUser>div>div>button:hover{
+    background-color: rgb(174, 211, 255);
+    color: white;
+  }
+  #showUser>div{
+    align-items: center;
+  }
+
+
+  #updatePdt {
+    border: 1px solid black;
+    height: auto;
+    align-content: center;
+  }
+  #updatePdt >#register1>input {
+    font-size: small;
+    background-color: rgb(255, 255, 255);
+    padding: 5px;
+    font-size: small;
+    text-align: center;
+    margin: 5px;
+  }
+  #updatePdt >#register1>input:last-child{
+    background-color: rgb(56, 86, 122);
+    color: white;
+    font-weight: 700;
+  }
+  #updatePdt >#register1>input:last-child:hover{
+    background-color: rgb(174, 211, 255);
+    color: white;
+    font-weight: 700;
+  }
+
+  #updatePdt>#register1{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-left: 50px;
+    padding-right: 50px;
+  }

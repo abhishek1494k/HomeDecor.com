@@ -47,7 +47,7 @@
         margin: 5px;
         border: 3px solid rgb(216, 216, 216);;
       }
-      #btn {
+      #btn,#register {
         padding: 15px;
         color: rgb(255, 255, 255);
         font-weight: 700;
@@ -72,17 +72,20 @@
       </div>
       <div id="inputs">
         <div action="#">
-          <h2>create account</h2>
-          <input required minlength="1" id="email" type="text" placeholder="* Enter Email" />
-          <input required minlength="1" id="name" type="text" placeholder="* Enter Name" />
-          <input required minlength="1" id="mob" type="tel" placeholder="* Enter Mobile No." />
-          <input required minlength="1" id="password" type="text" placeholder="* Enter Password" />
+          <h2>Sign In</h2>
+          <input id="email" type="text" placeholder="* Enter Email" />
+          <input id="password" type="text" placeholder="* Enter Password" />
           <input
-            style="background-color: blue"
+            style="background-color:blue"
             id="btn"
             type="submit"
-            value="Create an Account"
-          />
+            value="SIGNIN"
+          /><input
+          style="background-color:blue"
+          id="register"
+          type="submit"
+          value="CREATE ACCOUNT"
+        />
         </div>
       </div>
       <div id="radio">
@@ -106,27 +109,29 @@
   let btn = document.getElementById("btn");
 
   btn.addEventListener("click", async function () {
-    let name = document.getElementById("name").value;
     let email = document.getElementById("email").value;
     let password = document.getElementById("password").value;
-    let mob = document.getElementById("mob").value;
     let registerData = {
-      name,
       email,
-      mob,
       password,
     };
     bag = { ...registerData };
-    const res = await fetch("http://localhost:8080/signup", {
+    const res = await fetch("http://localhost:8080/signin", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(bag),
-    });
+    })    
     const data=await res.json();
-    if(res.ok){
-      alert(data);
-      window.location.href="index.html"
+    console.log(data)
+    alert(data.msg)
+    if(data.msg==="Signin Successfull"){
+        localStorage.setItem("usertoken",data.token)
+        localStorage.setItem("username",data.name)
+        window.location.href="index.html"
     }
   });
 
+  document.getElementById("register").addEventListener("click",()=>{
+    window.location.href="register.html"
+  })
 </script>

@@ -18,9 +18,11 @@
       .then((res) => res.json())
       .then((res) => {
         localStorage.setItem("token",res.token)
-        console.log(res);
         alert(res.msg);
-        window.location.href="index.html"
+        if(res.msg==="Admin Signin Successful"){
+          localStorage.setItem("admin",res.name)
+          window.location.href="../Admin/CRUD.html"
+        }
       })
       .catch((err) => {
         console.log(err);
