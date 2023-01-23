@@ -37,9 +37,13 @@ Version of npm packages used: <br><br>
 8. Signup/Signin Page for user<br>
 ![image](https://user-images.githubusercontent.com/112754448/213983702-e261b83f-6f33-41b3-9664-f29c9a83a88e.png)<br><br>
 ![image](https://user-images.githubusercontent.com/112754448/213983730-afcc4f25-966c-4a94-8d0e-537c55b3fb1c.png)<br><br>
-
+9. Admin Login Popup<br>
 ![image](https://user-images.githubusercontent.com/112754448/213983896-bde078db-d616-4729-8e37-1f6e0e9491e5.png)<br><br>
+10. Admin Signup Page:<br>
 ![image](https://user-images.githubusercontent.com/112754448/213983920-0d6f245c-ec91-46d2-a988-09b9c68e9d50.png)<br><br>
+11. Show Products"<br>
 ![image](https://user-images.githubusercontent.com/112754448/213984036-7569276c-963e-403b-bfb2-f5046eb59123.png)<br><br>
+12. Add Products <br>
 ![image](https://user-images.githubusercontent.com/112754448/213984061-3aaca424-2c24-48a1-9895-1416b1277206.png)<br><br>
+13. Update Products:<br>
 ![image](https://user-images.githubusercontent.com/112754448/213984088-f73b756d-afab-4cac-9707-0984d24dbaa6.png)<br><br>
