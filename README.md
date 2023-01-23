@@ -3,18 +3,18 @@ Frontend Link:https://gleeful-twilight-8d0bde.netlify.app/ <br> <br>
 Backend Link: https://good-rose-goshawk-yoke.cyclic.app/ <br> <br>
 Real Website: https://www.bedbathandbeyond.com/ <br> <br>
 Techstack : <br>
-HTML,CSS,Javascript (Frontend)
-Fontawesome (Library)
-MongoDB (Database)
-Node.js,Express.js(Framework)
-Version of npm packages used:
-    "bcrypt": "^5.1.0",
-    "cors": "^2.8.5",
-    "dotenv": "^16.0.3",
-    "express": "^4.18.2",
-    "jsonwebtoken": "^9.0.0",
-    "mongoose": "^6.8.4",
-    "nodemon": "^2.0.20"
+HTML,CSS,Javascript (Frontend) <br>
+Fontawesome (Library) <br>
+MongoDB (Database) <br>
+Node.js,Express.js(Framework) <br>
+Version of npm packages used: <br>
+    "bcrypt": "^5.1.0", <br>
+    "cors": "^2.8.5", <br>
+    "dotenv": "^16.0.3", <br>
+    "express": "^4.18.2", <br>
+    "jsonwebtoken": "^9.0.0", <br>
+    "mongoose": "^6.8.4", <br>
+    "nodemon": "^2.0.20" <br> <br>
             
 
 1. Popup- When website opens, a popup load and it can be closed <br>
