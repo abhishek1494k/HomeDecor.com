@@ -30,11 +30,14 @@ Version of npm packages used: <br><br>
 ![image](https://user-images.githubusercontent.com/112754448/213983517-3c3ae561-1ac2-4e53-baa7-cc159f130636.png) <br> <br>
 5. Grid Layout: <br>
 ![image](https://user-images.githubusercontent.com/112754448/213983555-cb9f6579-393d-4ada-b87a-c8c5d63a6d47.png) <br> <br>
-6. Dropdown Menu for Signin/Login <br>
+6. Dropdown Menu for Signin/Login <br><br>
 ![image](https://user-images.githubusercontent.com/112754448/213983607-6f273963-7d94-4060-8076-619411b28806.png) <br> <br>
+7. SideDrop Menu <br>
 ![image](https://user-images.githubusercontent.com/112754448/213983626-08970911-5aa3-4e4c-8893-ce2880685bcc.png)<br><br>
+8. Signup/Signin Page for user<br>
 ![image](https://user-images.githubusercontent.com/112754448/213983702-e261b83f-6f33-41b3-9664-f29c9a83a88e.png)<br><br>
 ![image](https://user-images.githubusercontent.com/112754448/213983730-afcc4f25-966c-4a94-8d0e-537c55b3fb1c.png)<br><br>
+
 ![image](https://user-images.githubusercontent.com/112754448/213983896-bde078db-d616-4729-8e37-1f6e0e9491e5.png)<br><br>
 ![image](https://user-images.githubusercontent.com/112754448/213983920-0d6f245c-ec91-46d2-a988-09b9c68e9d50.png)<br><br>
 ![image](https://user-images.githubusercontent.com/112754448/213984036-7569276c-963e-403b-bfb2-f5046eb59123.png)<br><br>
