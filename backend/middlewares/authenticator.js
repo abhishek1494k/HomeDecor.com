@@ -15,5 +15,4 @@ const auth=(req,res,next)=>{
         res.send({'msg':'Please Login as Admin First'})
     }
 }
-
 module.exports={auth}

@@ -22,11 +22,11 @@ adminRouter.post("/signup", async (req, res) => {
             specialkey,
           });
           await user.save();
-          res.json("Admin Signup Successful");
+          res.send({ msg: "Admin Signup Successfull",name:name });
         } else if(specialkey==="" || name==="" || email ==="" || password===""){
-          res.json("Fill All Details");
+          res.send({ msg: "Fill All Details"});
         } else {
-          res.json("Wrong Key");
+          res.send({ msg: "Wrong Key"});
         }
       }
     });
@@ -37,13 +37,14 @@ adminRouter.post("/signup", async (req, res) => {
 
 adminRouter.post("/signin", async (req, res) => {
   let { email, password } = req.body;
+  var name;
   try {
     const user = await AdminModel.find({ email });
     if (user.length > 0) {
       bcrypt.compare(password, user[0].password, (err, result) => {
         if (result) {
           const token = jwt.sign({ userID: user[0]._id }, process.env.key);
-          res.send({ msg: "Admin Signin Successful",token:token });
+          res.send({ msg: "Admin Signin Successful",token:token,name:user[0].name });
         } else {
           res.send({msg:"Wrong Credentials"});
         }

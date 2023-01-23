@@ -48,3 +48,15 @@ window.onload = function() {
   function closeNav() {
     document.getElementById("mySidenav").style.width = "0";
   }
+
+  function bedding(){
+    console.log("Bedding")
+    localStorage.setItem("category","bedding")
+    window.location.href="product.html"
+  }
+
+  function pillow(){
+    console.log("Pillow")
+    localStorage.setItem("category","Pillow")
+    window.location.href="product.html"
+  }

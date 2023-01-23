@@ -15,12 +15,34 @@
     <link rel="stylesheet" href="../style/leftDropDown.css" />
     <link rel="stylesheet" href="../style/crousel.css" />
     <link rel="stylesheet" href="../style/popup.css" />
+    <link rel="stylesheet" href="../style/dropDown4Signup.css" />
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"
     />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
   </head>
+
   <body>
+    <!-- Search Bar  -->
+    <div id="search_bar">
+      <i class="fa-solid fa-bars nav-icon" onclick="openNav()"></i>
+
+      <img src="../Media/logo1.png" alt="#" />
+
+      <div>
+        <input
+          type="text"
+          placeholder="🔍 What product can we help you find?"
+        />
+      </div>
+      <a href="#"><i class="fa-solid fa-user"></i></a>
+      <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+    </div>
+
     <!---------- Top red Bar ----------->
     <div id="top_red">
       <div><i class="fa-solid fa-angle-left"></i></div>
@@ -51,6 +73,7 @@
       </div>
       <div><i class="fa-solid fa-angle-right"></i></div>
     </div>
+
     <!---------- Top Blue Bar ----------->
     <div id="top_blue">
       <div id="top_blue_left">
@@ -59,14 +82,45 @@
         <a href="#">harmon</a>
       </div>
       <div id="top_blue_right">
+        <div class="down">
+          <a href="../HTML/register.html" class="downbtn"
+            ><i class="fa-solid fa-user"></i
+          ></a>
+          <div class="down-content">
+            <!-- 1 -->
+            <div>
+              <h5>welcome rewards</h5>
+              <p>
+                Earn & redeem points on every purchase across our family of
+                brands.
+              </p>
+              <button>
+                <a id="signin" href="../HTML/signin.html">Signin/Create</a>
+              </button>
+            </div>
+            <!-- 2 -->
+            <div>
+              <a href="#">track order</a>
+              <a href="#">my offers</a>
+              <a href="#">shopping lists</a>
+              <a href="#">idea boards</a>
+              <p style="color: rgb(255, 255, 255)">
+                Have a question for us?<br /><span
+                  style="color: rgb(223, 223, 223)"
+                  >We're here to help</span
+                >
+              </p>
+            </div>
+          </div>
+        </div>
+        <a id="username" href="#"></a>
         <a href="#"
           ><i class="fa-brands fa-get-pocket"></i> &nbsp;Same Day Delivery</a
         >
-        <a href="#"
-          ><i class="fa-solid fa-bag-shopping"></i>&nbsp;Store Pickup</a
-        >
+        <!-- <a href="#"><i class="fa-solid fa-bag-shopping"></i>&nbsp;Store Pickup</a> -->
       </div>
     </div>
+
     <!-- Side Drop Down -->
     <div id="mySidenav" class="sidenav">
       <div class="nav-icon" onclick="closeNav()">
@@ -76,19 +130,7 @@
       <a href="#">About</a>
       <a href="#">Contact</a>
     </div>
-    <!-- Search Bar  -->
-    <div id="search_bar">
-      <i class="fa-solid fa-bars nav-icon" onclick="openNav()"></i>
-      <img src="../Media/logo1.png" alt="#" />
-      <div>
-        <input
-          type="text"
-          placeholder="🔍 What product can we help you find?"
-        />
-      </div>
-      <a style="text-decoration:none; color:rgb(56, 86, 122);" href="../HTML/register.html">signin</a>
-      <i class="fa-solid fa-cart-shopping"></i>
-    </div>
+
     <!--------------------Pop Up CSS in Index.css -------------------------->
     <!-- <div id="popup">
       <div id="popup-content">
@@ -112,10 +154,33 @@
       </div>
     </div> -->
 
-    <!--------------------- DropDown Menu --------------------->
+    <!--------------------- Categories --------------------->
+    <div
+      id="categories"
+      style="
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+      "
+    >
+      <button onclick="bedding()" >bedding</button>
+      <button onclick="pillow()">pillows</button>
+      <button>kitchen</button>
+      <button>dinning</button>
+      <button>storage & cleaning</button>
+      <button>home decor</button>
+      <button>curtains</button>
+      <button>furniture</button>
+      <button>health & beauty</button>
+      <button>outdoor</button>
+      <button>luggage pet & more</button>
+      <button>gifts</button>
+      <button>baby & kids</button>
+      <button>shop by brand</button>
+    </div>
 
     <hr />
-
     <!--First Image----->
     <div
       style="
@@ -126,19 +191,20 @@
       "
     >
       <img
-        width="90%"
+        width="80%"
         src="https://b3h2.scene7.com/is/image/BedBathandBeyond/2023-01-10-12-35-38-FY22-FW35-0103-US-Dont-Miss-Deals-With-CTA-C01-19-DSK?$content$&wid=1280&hei=300"
         alt=""
       />
     </div>
     <div style="text-align: center">
+      <br />
       <p>
         Valid thru 1/22. Assortment varies by store. Reward points are valid for
         Welcome Rewards™ members only. Exclusions apply.
       </p>
     </div>
-<!-- hand made Crousel 3 -->
-    <br /><br><br>
+    <!-- hand made Crousel 3 -->
+    <br /><br /><br />
     <div class="crousel">
       <div><i class="fa-solid fa-angle-left" id="left_crousel3"></i></div>
       <div class="crousel_div3"></div>
@@ -155,11 +221,12 @@
       "
     >
       <img
-        width="90%"
+        width="80%"
         src="https://b3h2.scene7.com/is/image/BedBathandBeyond/2022-06-24-09-34-53-FY22-FW18-BBB-US-0630-Omni-BOPIS-Web-C01_19-DSK%20(1)%20(1)?$content$&wid=1280&hei=150"
         alt=""
       />
     </div>
+    <br />
     <div style="text-align: center">
       <p>
         Valid thru 1/22. Assortment varies by store. Reward points are valid for
@@ -176,7 +243,7 @@
       "
     >
       <img
-        width="90%"
+        width="80%"
         src="https://b3h2.scene7.com/is/image/BedBathandBeyond/FY22-FW46-BBB-US-0119-SUSE-C01_19-DSK?$content$&wid=1280&hei=500"
         alt=""
       />
@@ -277,11 +344,12 @@
       "
     >
       <img
-        width="90%"
+        width="80%"
         src="https://b3h2.scene7.com/is/image/BedBathandBeyond/FY22-FW12-BBB-US-CA-0515-0521-WEB-C01_19-DSK-Clearance50?$content$&wid=1280&hei=200"
         alt="#"
       />
     </div>
+    <br />
     <!-- Four*One -->
     <div id="four_one">
       <div>
@@ -337,7 +405,7 @@
       brew your way
     </h1>
     <!-- two_one -->
-    <div id="two_one">
+    <div style="width: 82%" id="two_one">
       <div>
         <img
           src="https://b3h2.scene7.com/is/image/BedBathandBeyond/FY22-FW46-US-0108-0114-WEB-HP-C15-12-V1-3?$content$&wid=945"
@@ -353,7 +421,7 @@
         <h4>Keurig K-cup pods 32-48ct</h4>
       </div>
     </div>
-
+    <!-- Valentine Image -->
     <div
       style="
         margin: auto;
@@ -363,7 +431,7 @@
       "
     >
       <img
-        width="90%"
+        width="80%"
         src="https://b3h2.scene7.com/is/image/BedBathandBeyond/FY22-0102-BBB-FW45-Valentines-Day-Shop-Web-Banner-DSK-1?$content$&wid=1280&hei=300"
         alt=""
       />
@@ -652,7 +720,7 @@
       <div><i class="fa-solid fa-angle-right" id="right_crousel1"></i></div>
     </div>
     <br /><br /><br />
-        <!-- Hand Made Crousel 2 -->
+    <!-- Hand Made Crousel 2 -->
     <h1
       style="
         text-align: center;
@@ -680,7 +748,180 @@
           <input type="email" id="admin_email" placeholder="* Email" />
           <input type="password" id="admin_password" placeholder="* Password" />
           <input type="submit" id="btn" />
-          <a href="../Admin/adminregister.html">Admin Register</a>
+          <a href="../Admin/register.html">Admin Register</a>
+        </div>
+      </div>
+    </div>
+    <div id="footer_text">
+      <p>
+        True to its name, Bed Bath & Beyond® is committed to being the
+        destination for home goods, offering a wide array of top-quality items
+        in bedding, bath, home décor, furniture, beauty & fitness, luggage, and
+        more. Whether your aesthetic is traditional, modern, rustic, farmhouse,
+        or transitional, you'll find an impressive assortment of household items
+        to suit your décor style.
+      </p>
+      <br />
+
+      <p>
+        In addition to the well-known brands, our competitive lineup of owned
+        brands can help you create the ambiance for your every need. For
+        instance, luxuriate in a serene oasis with Everhome™, sleep happy and
+        stay cozy with Wamsutta®, or attain organized bliss Squared Away™.
+        Simply Essential™ has all the essentials for the everyday task at hand
+        and H for Happy™ has everything you need for every season. When family
+        and friends spend time together, OurTable™ ensures you what you need to
+        cook a delicious meal to share together.
+      </p>
+      <br />
+      <p>
+        Bed Bath & Beyond serves as a one-stop shop to create a custom wedding
+        registry with convenience and ease. With a huge selection of must-have
+        household items like bedding, cookware, electronics, and more from top
+        brands, Bed Bath & Beyond is here to make registering for your wedding
+        the least of your worries by guiding you through the process step by
+        step. For instance, features like interactive registry checklists,
+        helpful online tools, and unique perks make creating a wedding registry
+        super simple. Plus, with registry favorites and household essentials
+        across all categories, look to Bed Bath & Beyond as the top destination
+        for shopping.
+      </p>
+      <br />
+      <p>
+        Shopping is easy in-store with Bed Bath & Beyond's coast-to-coast
+        presence and our user-friendly website. You can order online and use our
+        curbside or Store Pickup option or our Same Day Delivery. And if you
+        want additional perks and benefits, our Welcome Rewards+™ program is
+        just for you!
+      </p>
+    </div>
+    <br />
+    <hr />
+    <div id="footer_container">
+      <div id="footer_container_centre">
+        <div id="social_media">
+          <h6>LETS'S CONNECT</h6>
+          <div>
+            <i class="fa-brands fa-facebook-f"></i>
+            <i class="fa-brands fa-twitter"></i>
+            <i class="fa-brands fa-instagram"></i>
+            <i class="fa-brands fa-pinterest"></i>
+            <i class="fa-brands fa-youtube"></i>
+          </div>
+          <h6>SIGN UP FOR EMAILS</h6>
+          <p>
+            We'll let you know about the latest deals & newest products.
+            <span style="font-weight: 600; color: black"
+              >New subscribers will get 20% off Single Item</span
+            >
+          </p>
+          <input type="text" placeholder="* enter email" />
+          <button>get offer</button>
+          <p>Privacy Policy &nbsp; California Notice of Financial Incentives</p>
+          <h5>DOWNLOAD OUR APP</h5>
+          <img
+            width="60%"
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Download_on_the_App_Store_Badge.svg/2560px-Download_on_the_App_Store_Badge.svg.png"
+            alt=""
+          />
+          <img
+            width="60%"
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Google_Play_Store_badge_EN.svg/2560px-Google_Play_Store_badge_EN.svg.png"
+            alt=""
+          />
+        </div>
+        <div class="footer_one">
+          <div>
+            <h5>SHIPING & RETURNS</h5>
+            <ul>
+              <li>Track Order</li>
+              <li>Shipping Info</li>
+              <li>Store Pickup</li>
+              <li>Same Day Delivery</li>
+              <li>Returns</li>
+              <li>Product Recall Information</li>
+              <li>Rebates</li>
+              <li>Price Match Promise</li>
+            </ul>
+          </div>
+          <div>
+            <h5>SHOPPING TOOLS</h5>
+            <ul>
+              <li>Idea boards</li>
+              <li>Shop College</li>
+              <li>Shop Movers</li>
+              <li>Shop Catalogs</li>
+              <li>Shop Personalised Invitations</li>
+              <li>Shop by Brand</li>
+              <li>Shop Clearances & Savings</li>
+              <li>Shop Subscription</li>
+              <li>Buying Guides</li>
+              <li>Guides & Advice</li>
+              <li>Coupons</li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer_one">
+          <div>
+            <h5>SHIPING & RETURNS</h5>
+            <ul>
+              <li>Track Order</li>
+              <li>Shipping Info</li>
+              <li>Store Pickup</li>
+              <li>Same Day Delivery</li>
+              <li>Returns</li>
+              <li>Product Recall Information</li>
+              <li>Rebates</li>
+              <li>Price Match Promise</li>
+            </ul>
+          </div>
+          <div>
+            <h5>SHOPPING TOOLS</h5>
+            <ul>
+              <li>Idea boards</li>
+              <li>Shop College</li>
+              <li>Shop Movers</li>
+              <li>Shop Catalogs</li>
+              <li>Shop Personalised Invitations</li>
+              <li>Shop by Brand</li>
+              <li>Shop Clearances & Savings</li>
+              <li>Shop Subscription</li>
+              <li>Buying Guides</li>
+              <li>Guides & Advice</li>
+              <li>Coupons</li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer_one">
+          <div>
+            <h5>SHIPING & RETURNS</h5>
+            <ul>
+              <li>Track Order</li>
+              <li>Shipping Info</li>
+              <li>Store Pickup</li>
+              <li>Same Day Delivery</li>
+              <li>Returns</li>
+              <li>Product Recall Information</li>
+              <li>Rebates</li>
+              <li>Price Match Promise</li>
+            </ul>
+          </div>
+          <div>
+            <h5>SHOPPING TOOLS</h5>
+            <ul>
+              <li>Idea boards</li>
+              <li>Shop College</li>
+              <li>Shop Movers</li>
+              <li>Shop Catalogs</li>
+              <li>Shop Personalised Invitations</li>
+              <li>Shop by Brand</li>
+              <li>Shop Clearances & Savings</li>
+              <li>Shop Subscription</li>
+              <li>Buying Guides</li>
+              <li>Guides & Advice</li>
+              <li>Coupons</li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>
@@ -691,3 +932,8 @@
 <script src="../javascript/crousel.js"></script>
 <script src="../javascript/popup.js"></script>
 <script src="../javascript/adminlogin.js"></script>
+<script>
+  document.getElementById("username").innerText = ` ${
+    localStorage.getItem("username") || ""
+  }`;
+</script>

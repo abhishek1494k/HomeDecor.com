@@ -16,6 +16,15 @@ pdtRouter.get("/",async(req,res)=>{
     }
 })
 
+pdtRouter.get("/category/:id",async(req,res)=>{
+    try{
+        const pdt=await PdtModel.find({category:req.params.id})
+        res.send(pdt)
+    }catch(e){
+        console.log('err',e);
+    }
+})
+
 pdtRouter.get("/:id",async(req,res)=>{
     try{
         const pdt=await PdtModel.findById({_id:req.params.id})

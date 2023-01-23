@@ -5,9 +5,9 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Admin CRUD</title>
+  <title>Product Page</title>
   <script src="https://kit.fontawesome.com/d68d319f71.js" crossorigin="anonymous"></script>
-  <link rel="stylesheet" href="../style/adminCRUD.css">
+  <link rel="stylesheet" href="../style/product.css">
 </head>
 
 <body>
@@ -15,16 +15,17 @@
     <div id="left_div">
       <div id="left_div_1">
         <img width="30%" src="../Media/logo1.png" alt="">
-        <h4>HomeDecor</h4>
+        <h4 style="color:white; margin-left: 5px;" >HomeDecor</h4>
       </div>
       <div id="left_div_2">
+        <div><button id="HomeDecor" >Home</button></div>
         <div><button id="showAllBtn">Show Products</button></div>
         <div><button id="add">Add Products</button></div>
         <div><button id="showUserBtn">Show Users</button></div>
         <div><button>Products</button></div>
         <div><button>Products</button></div>
         <div><button>Products</button></div>
-        <div><button id="HomeDecor" >HomeDecor</button></div>
+
       </div>
       <hr>
       <div id="left_div_3"></div>
@@ -49,11 +50,12 @@
 <script>
 
   let adminName=document.getElementById("adminName")
-  adminName.innerHTML=`<h5>Hello ${localStorage.getItem("admin")}</h5>`
+  adminName.innerHTML=`<h5>Hello ${localStorage.getItem("username")}</h5>`
 
 
   document.getElementById("HomeDecor").addEventListener("click",()=>{
     window.location.href="../HTML/index.html"
   })
+  
 </script>
-<script src="../javascript/adminCRUD.js"></script>
+<script src="../javascript/product.js"></script>
