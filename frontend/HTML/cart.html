@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Product Page</title>
+  <script src="https://kit.fontawesome.com/d68d319f71.js" crossorigin="anonymous"></script>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      font-family: 'Courier New', Courier, monospace
+    }
+
+    #parent_div {
+      display: flex;
+    }
+
+    #left_div {
+      height: 100vh;
+      width: 20%;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      background-color: rgb(56, 86, 122);
+    }
+
+    #left_div_1 {
+      background-color: rgb(56, 86, 122);
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      padding-left: 23px;
+    }
+
+    #left_div_2 {
+      display: flex;
+      background-color: rgb(56, 86, 122);
+      flex-direction: column;
+      align-items: center;
+      align-content: center;
+      padding-top: 30px;
+      padding-bottom: 30px;
+      height: 100%;
+    }
+
+    #left_div_2 button {
+      border: none;
+      outline: none;
+      background-color: white;
+      font-weight: 600;
+      padding: 8px 65px;
+      background-color: rgb(56, 86, 122);
+      color: white;
+    }
+
+    #left_div_2 button:hover {
+      background-color: rgb(255, 255, 255);
+      color: rgb(56, 86, 122);
+
+    }
+
+    #left_div_2 div:hover {
+      background-color: rgb(255, 255, 255);
+      box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    }
+
+    #left_div_2 div {
+      /* border: 1px solid rgb(255, 255, 255); */
+      width: 100%;
+      margin: 5px;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+    }
+
+    #right_div {
+      border: 1px solid rgb(215, 215, 215);
+      height: auto;
+      width: 80%;
+      display: flex;
+      flex-direction: column;
+    }
+
+    #right_div_1 {
+      border-bottom: 1px solid rgb(125, 12, 12);
+      padding: 5px;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    #right_div_1>div:first-child {
+      background-color: rgb(255, 255, 255);
+      width: 70%;
+      padding: 5px;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+    }
+
+    #right_div_1>div:first-child>input {
+      width: 60%;
+      border: none;
+    }
+
+    #right_div_2 {
+      padding-left: 40px;
+      padding-top: 40px;
+      padding-right: 40px;
+    }
+
+    #showAdd {
+      border: 1px solid black;
+      height: auto;
+      align-content: center;
+    }
+
+    #showAdd>#register>input {
+      font-size: small;
+      background-color: rgb(255, 255, 255);
+      padding: 5px;
+      font-size: small;
+      text-align: center;
+      margin: 5px;
+    }
+
+    #showAdd>#register>input:last-child {
+      background-color: rgb(56, 86, 122);
+      color: white;
+      font-weight: 700;
+    }
+
+    #showAdd>#register>input:last-child:hover {
+      background-color: rgb(174, 211, 255);
+      color: white;
+      font-weight: 700;
+    }
+
+    #showAdd>#register {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding-left: 50px;
+      padding-right: 50px;
+    }
+
+    #showAll {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: auto;
+    }
+
+    #showAll>div {
+      border: 1px solid rgb(156, 156, 156);
+      padding: 10px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    #showAll div img {
+      width: 100%;
+      border: 1px solid rgb(0, 0, 0);
+    }
+
+    #showAll>div>div {
+      padding: 2px;
+
+    }
+
+    #showAll>div>div:nth-child(3) {
+      display: flex;
+      flex-direction: row;
+
+    }
+
+    #showAll>div>div:nth-child(3)>h5:first-child {
+      color: red;
+    }
+
+    #showAll>div>div:last-child {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+    }
+
+    #showUser>div {
+      border: 1px solid black;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      margin-bottom: 10px;
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+
+    #showUser>div>div>button {
+      transition: all 0.3s;
+      padding: 5px;
+    }
+
+    #showUser>div>div>button:hover {
+      background-color: rgb(174, 211, 255);
+      color: white;
+    }
+
+    #showUser>div {
+      align-items: center;
+    }
+
+
+    #updatePdt {
+      border: 1px solid black;
+      height: auto;
+      align-content: center;
+    }
+
+    #updatePdt>#register1>input {
+      font-size: small;
+      background-color: rgb(255, 255, 255);
+      padding: 5px;
+      font-size: small;
+      text-align: center;
+      margin: 5px;
+    }
+
+    #updatePdt>#register1>input:last-child {
+      background-color: rgb(56, 86, 122);
+      color: white;
+      font-weight: 700;
+    }
+
+    #updatePdt>#register1>input:last-child:hover {
+      background-color: rgb(174, 211, 255);
+      color: white;
+      font-weight: 700;
+    }
+
+    #updatePdt>#register1 {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding-left: 50px;
+      padding-right: 50px;
+    }
+  </style>
+</head>
+
+<body>
+  <div id='parent_div'>
+    <div id="left_div">
+      <div id="left_div_1">
+        <img width="30%" src="../Media/logo1.png" alt="">
+        <h4 style="color:white; margin-left: 5px;">HomeDecor</h4>
+        <hr>
+      </div>
+      <div id="left_div_2">
+        <div><button id="HomeDecor">Home</button></div>
+        <div><button id="showAllBtn"> </button></div>
+        <div><button id="add"> </button></div>
+        <div><button id="showUserBtn"> </button></div>
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+      <hr>
+      <div id="left_div_3"></div>
+    </div>
+    <div id="right_div">
+      <div id="right_div_1">
+        <div> <i class="fa-solid fa-magnifying-glass"></i>
+          <input type="text" placeholder="CTRL K Search Anything...">
+          <i class="fa-regular fa-circle-question"></i>
+          <i class="fa-solid fa-bell"></i>
+        </div>
+        <div id="adminName"></div>
+      </div>
+      <div id="right_div_2">
+        <!-- <div id="showAdd"></div>
+        <div id="showAll"></div> -->
+      </div>
+    </div>
+</body>
+
+</html>
+<script>
+
+  let adminName = document.getElementById("adminName")
+  adminName.innerHTML = `<h5>Hello ${localStorage.getItem("username") || ""}</h5>`
+
+
+  document.getElementById("HomeDecor").addEventListener("click", () => {
+    window.location.href = "../index.html"
+  })
+
+</script>
+<script>
+  let motherDiv = document.getElementById("right_div_2")
+
+
+  // Show Products------------------------------------------------------->
+  let showAll = document.getElementById("showAllBtn")
+
+  async function onload() {
+    let res = await fetch(`http://localhost:8080/cart`, {
+      headers: { Authorization: localStorage.getItem("usertoken") },
+    })
+      .then((res) => res.json())
+      .then((res) => {
+        bag = [...res];
+        render(bag);//  DISPLAY********************************------>
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  }
+
+  onload();
+
+  async function render(bag) {//  DISPLAY***********************------>
+    motherDiv.innerHTML = ""
+    let div1 = document.createElement("div")
+    div1.setAttribute('id', 'showAll')
+    motherDiv.append(div1)
+
+    document.getElementById("showAll").innerHTML = "";
+    document.getElementById("showAll").innerHTML = `
+    ${bag
+        .map((item) => {
+          let id = item._id;
+          let name = item.name;
+          let image = item.image;
+          let rating = item.rating;
+          let lowprice = item.lowprice;
+          let highprice = item.highprice;
+          return renderCard(name, image, rating, lowprice, highprice, id);//CARD------>
+        })
+        .join("")}
+    `;
+
+    let cart_btns = document.querySelectorAll(".cart");
+    for (cart of cart_btns) {
+      cart.addEventListener("click", function () {
+        let id = event.target.dataset.id;
+        console.log("cart")
+        cartPdt(id);
+      });
+    }
+
+    let wishlist_btns = document.querySelectorAll(".wishlist");
+    for (wishlist_btn of wishlist_btns) {
+      wishlist_btn.addEventListener("click", function () {
+        let id = event.target.dataset.id;
+        removePdt(id);
+      });
+    }
+  }
+  //Render Card------------------------------------------------->
+  function renderCard(name, image, rating, lowprice, highprice, id) {
+    return `<div>
+      <div><img src="${image}"></div>
+      <div><h5>${name}</h5></div>
+      <div><h5>$${lowprice} </h5>
+        <h5> - $${highprice}</h5></div>
+      <div><h6>Rating: ${rating}</h6></div>
+      <div><button  class="cart" data-id=${id} ><i class="fa-solid fa-cart-plus"></i>  Buy </button>
+      <button class="wishlist" data-id="${id}"><i class="fa-solid fa-heart-circle-plus"></i>  Remove</button></div>
+      </div>`;
+  }
+
+  async function cartPdt(id) {
+    let cartItem;
+    let res = await fetch(`http://localhost:8080/cart/${id}`, {
+      headers: { Authorization: localStorage.getItem("usertoken") },
+    })
+      .then((res) => res.json())
+      .then((res) => {
+        // console.log(res)
+        cartItem = res;
+        // render(bag);//  DISPLAY********************************------>
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+
+
+    let res1 = await fetch("https://localhost:8080/buy", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: localStorage.getItem("usertoken"),
+      },
+      body: JSON.stringify(cartItem),
+    })
+      .then((res) => res.json())
+      .then((res) => {
+        alert(res)
+        // render(bag);//  DISPLAY********************************------>
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  }
+
+  async function removePdt(id) {
+    let res = await fetch(`http://localhost:8080/cart/${id}`, {
+      method: "DELETE",
+      headers: { Authorization: localStorage.getItem("usertoken") },
+    })
+      .then((res) => res.json())
+      .then((res) => {
+        alert(res)
+      })
+  }
+</script>
