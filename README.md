@@ -1,10 +1,11 @@
 # valid-morning-8854
-Frontend Link:https://gleeful-twilight-8d0bde.netlify.app/ <br>
-Backend Link: https://good-rose-goshawk-yoke.cyclic.app/
-Real Website: https://www.bedbathandbeyond.com/
+Frontend Link:https://gleeful-twilight-8d0bde.netlify.app/ <br> <br>
+Backend Link: https://good-rose-goshawk-yoke.cyclic.app/ <br> <br>
+Real Website: https://www.bedbathandbeyond.com/ <br> <br>
 
-
+1. Popup- When website opens, a popup load and it can be closed <br>
 ![image](https://user-images.githubusercontent.com/112754448/213983409-b77c8ffe-91bb-4523-a261-1d23ecd7ad30.png)
+ <br> <br>
 ![image](https://user-images.githubusercontent.com/112754448/213983453-5150f9a0-e427-4fd6-90c9-43d282c0fd2d.png)
 ![image](https://user-images.githubusercontent.com/112754448/213983486-1304c48f-b512-4e7b-a02e-4ac1ed9d7c9b.png)
 ![image](https://user-images.githubusercontent.com/112754448/213983517-3c3ae561-1ac2-4e53-baa7-cc159f130636.png)
