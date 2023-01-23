@@ -5,6 +5,9 @@ pdtRouter.use(express.json());
 const jwt = require("jsonwebtoken");
 const bcrypt = require("bcrypt");
 
+const cors=require("cors")
+pdtRouter.use(cors())
+
 const { PdtModel } = require("../models/product.model");
 
 pdtRouter.get("/",async(req,res)=>{

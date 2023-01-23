@@ -9,12 +9,14 @@ const { userRouter } = require("./routes/user.route");
 app.use("/", userRouter);
 const { adminRouter } = require("./routes/admin.route");
 app.use("/admin", adminRouter);
+
 const { auth } = require("./middlewares/authenticator");
 app.use(auth)
-const { pdtRouter } = require("./routes/product.route");
-app.use("/pdt",pdtRouter)
 const { cartRouter } = require("./routes/cart.route");
 app.use("/cart",cartRouter)
+const { pdtRouter } = require("./routes/product.route");
+app.use("/pdt",pdtRouter)
+
 
 const { connection } = require("./configs/db");
 

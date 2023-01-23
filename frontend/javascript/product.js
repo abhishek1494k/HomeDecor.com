@@ -1,11 +1,12 @@
 let motherDiv=document.getElementById("right_div_2")
 
+
 // Show Products------------------------------------------------------->
   let showAll = document.getElementById("showAllBtn")
 
 async function onload(){
-    let res = await fetch(`http://localhost:8080/pdt/category/${localStorage.getItem("category")}`, {
-      headers: { Authorization: localStorage.getItem("token") },
+    let res = await fetch(`https://cautious-fox-life-jacket.cyclic.app/pdt/category/${localStorage.getItem("category")}`, {
+      headers: { Authorization: localStorage.getItem("usertoken") },
     })
       .then((res) => res.json())
       .then((res) => {
@@ -72,7 +73,7 @@ onload();
 
   async function cartPdt(id){
     let cartItem;
-    let res = await fetch(`http://localhost:8080/pdt/${id}`, {
+    let res = await fetch(`https://cautious-fox-life-jacket.cyclic.app/pdt/${id}`, {
       headers: { Authorization: localStorage.getItem("token") },
     })
       .then((res) => res.json())
@@ -86,11 +87,11 @@ onload();
       });
 
 
-      let res1 = await fetch("http://localhost:8080/cart", {
+      let res1 = await fetch("https://cautious-fox-life-jacket.cyclic.app/cart", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
-        Authorization: localStorage.getItem("token"),
+        Authorization: localStorage.getItem("usertoken"),
       },
       body: JSON.stringify(cartItem),
     })

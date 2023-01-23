@@ -60,7 +60,7 @@
   </head>
   <body>
     <div >
-        <a style="text-decoration:none; color:rgb(56, 86, 122);" href="index.html"><i class="fa-solid fa-backward"></i> back</a>
+        <a style="text-decoration:none; color:rgb(56, 86, 122);" href="../index.html"><i class="fa-solid fa-backward"></i> back</a>
     </div>
     <div id="container">
       <div>
@@ -107,7 +107,7 @@
 <script>
   let bag = [];
   let btn = document.getElementById("btn");
-
+  
   btn.addEventListener("click", async function () {
     let email = document.getElementById("email").value;
     let password = document.getElementById("password").value;
@@ -116,7 +116,7 @@
       password,
     };
     bag = { ...registerData };
-    const res = await fetch("http://localhost:8080/signin", {
+    const res = await fetch("https://cautious-fox-life-jacket.cyclic.app/signin", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(bag),
@@ -127,7 +127,7 @@
     if(data.msg==="Signin Successfull"){
         localStorage.setItem("usertoken",data.token)
         localStorage.setItem("username",data.name)
-        window.location.href="index.html"
+        window.location.href="../index.html"
     }
   });
 

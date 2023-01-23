@@ -52,11 +52,11 @@ window.onload = function() {
   function bedding(){
     console.log("Bedding")
     localStorage.setItem("category","bedding")
-    window.location.href="product.html"
+    window.location.href="./HTML/product.html"
   }
 
   function pillow(){
     console.log("Pillow")
     localStorage.setItem("category","Pillow")
-    window.location.href="product.html"
+    window.location.href="./HTML/product.html"
   }

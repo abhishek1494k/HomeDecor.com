@@ -13,7 +13,7 @@ btn.addEventListener("click", async function () {
     specialkey
   };
   bag = { ...registerData };
-  const res = await fetch("http://localhost:8080/admin/signup", {
+  const res = await fetch("https://cautious-fox-life-jacket.cyclic.app/admin/signup", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify(bag),
@@ -23,7 +23,7 @@ btn.addEventListener("click", async function () {
     alert(res.msg);
     if(res.msg==="Admin Signup Successfull"){
       localStorage.setItem("admin",res.name)
-      window.location.href="CRUD.html"
+      window.location.href="../index.html"
     }
   })
   .catch((err) => {

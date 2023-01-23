@@ -1,6 +1,8 @@
 const express = require("express");
 const adminRouter = express.Router();
 adminRouter.use(express.json());
+const cors=require("cors")
+adminRouter.use(cors())
 
 const jwt = require("jsonwebtoken");
 const bcrypt = require("bcrypt");

@@ -6,6 +6,8 @@ const jwt = require("jsonwebtoken");
 const bcrypt = require("bcrypt");
 const { CartModel } = require("../models/cart.model");
 
+// const cors=require("cors")
+// cartRouter.use(cors())
 
 // cartRouter.get("/",async(req,res)=>{
 //     try{
