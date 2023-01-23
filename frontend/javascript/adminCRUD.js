@@ -1,5 +1,4 @@
 let motherDiv=document.getElementById("right_div_2")
-
   // ADD Products------------------------------------------------------->
 
   let addBtn = document.getElementById("add")
@@ -45,7 +44,7 @@ let motherDiv=document.getElementById("right_div_2")
       category,
     };
     bag = { ...data };
-    let res = await fetch("http://localhost:8080/pdt", {
+    let res = await fetch("https://cautious-fox-life-jacket.cyclic.app/pdt", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -68,7 +67,7 @@ let motherDiv=document.getElementById("right_div_2")
   let showAll = document.getElementById("showAllBtn")
 
   showAll.addEventListener("click", async () => {
-    let res = await fetch("http://localhost:8080/pdt", {
+    let res = await fetch("https://cautious-fox-life-jacket.cyclic.app/pdt", {
       headers: { Authorization: localStorage.getItem("token") },
     })
       .then((res) => res.json())
@@ -136,7 +135,7 @@ let motherDiv=document.getElementById("right_div_2")
 
   //DELETE PDT------------------------------------------------>
   async function deletePdt(id) {
-    let res = await fetch(`http://localhost:8080/pdt/${id}`, {
+    let res = await fetch(`https://cautious-fox-life-jacket.cyclic.app/pdt/${id}`, {
       method: "DELETE",
       headers: { Authorization: localStorage.getItem("token") },
     })
@@ -148,7 +147,7 @@ let motherDiv=document.getElementById("right_div_2")
         console.log(err);
       });
 
-      let res2 = await fetch("http://localhost:8080/pdt", {
+      let res2 = await fetch("https://cautious-fox-life-jacket.cyclic.app/pdt", {
       headers: { Authorization: localStorage.getItem("token") },
     })
       .then((res) => res.json())
@@ -190,7 +189,7 @@ let motherDiv=document.getElementById("right_div_2")
     </div>
     `;
 
-    let res = await fetch(`http://localhost:8080/pdt/${id}`, {
+    let res = await fetch(`https://cautious-fox-life-jacket.cyclic.app/pdt/${id}`, {
       headers: { Authorization: localStorage.getItem("token") },
     })
       .then((res) => res.json())
@@ -229,7 +228,7 @@ let motherDiv=document.getElementById("right_div_2")
     console.log(id)
     bag = { ...data };
 
-    let res = await fetch(`http://localhost:8080/pdt/${id}`, {
+    let res = await fetch(`https://cautious-fox-life-jacket.cyclic.app/pdt/${id}`, {
       method: "PATCH",
       headers: {
         "Content-Type": "application/json",
@@ -240,7 +239,7 @@ let motherDiv=document.getElementById("right_div_2")
     const msg = await res.json()
     alert(msg)
 
-    let res2 = await fetch("http://localhost:8080/pdt", {
+    let res2 = await fetch("https://cautious-fox-life-jacket.cyclic.app/pdt", {
       headers: { Authorization: localStorage.getItem("token") },
     })
       .then((res) => res.json())
@@ -260,10 +259,11 @@ let showuser = document.getElementById("showUserBtn")
 let user = [];
 showuser.addEventListener("click", async () => {
 
-  let res = await fetch("http://localhost:8080/showuser")
+  let res = await fetch("https://cautious-fox-life-jacket.cyclic.app/showuser")
     .then((res) => res.json())
     .then((res) => {
       user = [...res];
+      console.log(user)
       renderUser(user);//  DISPLAY********************************------>
     })
     .catch((err) => {
@@ -283,11 +283,11 @@ showuser.addEventListener("click", async () => {
   ${user
       .map((item) => {
         let id = item._id;
-        let username = item.username;
+        let name = item.name;
         let email = item.email;
         let mob = item.mob;
         return `<div>
-      <div><h5>Name: ${username}</h5></div>
+      <div><h5>Name: ${name}</h5></div>
       <div><h5>Email: ${email} </h5></div>
       <div><h5>Mobile: ${mob}</h5></div>
       <div><button  class="user_delete-btn" data-id=${id} >Delete</button></div>
@@ -306,7 +306,7 @@ showuser.addEventListener("click", async () => {
  }
 
  async function deleteUser(id) {
-  let res = await fetch(`http://localhost:8080/deleteuser/${id}`, {
+  let res = await fetch(`https://cautious-fox-life-jacket.cyclic.app/deleteuser/${id}`, {
     method: "DELETE"
   })
     .then((res) => res.json())
@@ -317,7 +317,7 @@ showuser.addEventListener("click", async () => {
       console.log(err);
     });
 
-    let res2 = await fetch("http://localhost:8080/showuser")
+    let res2 = await fetch("https://cautious-fox-life-jacket.cyclic.app/showuser")
     .then((res) => res.json())
     .then((res) => {
       user = [...res];

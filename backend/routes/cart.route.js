@@ -6,6 +6,8 @@ const jwt = require("jsonwebtoken");
 const bcrypt = require("bcrypt");
 const { CartModel } = require("../models/cart.model");
 
+const cors=require("cors")
+cartRouter.use(cors())
 
 // cartRouter.get("/",async(req,res)=>{
 //     try{
@@ -36,6 +38,7 @@ const { CartModel } = require("../models/cart.model");
 
 cartRouter.post("/",async(req,res)=>{
     const payload=req.body;
+    console.log(payload)
     try{
         const cart_pdt=new CartModel(payload)
         await cart_pdt.save()

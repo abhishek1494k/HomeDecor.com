@@ -7,6 +7,9 @@ const auth=(req,res,next)=>{
        if(decoded){
         const userID=decoded.userID;
         req.body.userID=userID;
+        // res.setHeader('Access-Control-Allow-Origin','*');
+        // res.setHeader('Access-Control-Allow-Methods','GET,POST,PUT,PATCH,DELETE');
+        // res.setHeader('Access-Control-Allow-Methods','Content-Type','Authorization');
         next()
        }else {
         res.send({'msg':'Please Login as Admin First'})

@@ -6,6 +6,10 @@ const bcrypt = require("bcrypt");
 
 const { UserModel } = require("../models/user.model");
 
+const cors=require("cors")
+userRouter.use(cors())
+
+
 userRouter.get("/", (req, res) => {
   res.send("Home");
 });
