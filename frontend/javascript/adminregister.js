@@ -13,7 +13,7 @@ btn.addEventListener("click", async function () {
     specialkey
   };
   bag = { ...registerData };
-  const res = await fetch("https://cautious-fox-life-jacket.cyclic.app/admin/signup", {
+  const res = await fetch("https://good-rose-goshawk-yoke.cyclic.app/admin/signup", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify(bag),
