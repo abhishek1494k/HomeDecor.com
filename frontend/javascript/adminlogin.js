@@ -11,7 +11,7 @@
       password,
     };
     bag = { ...registerData };
-    let res = await fetch("https://cautious-fox-life-jacket.cyclic.app/admin/signin", {
+    let res = await fetch("https://good-rose-goshawk-yoke.cyclic.app/admin/signin", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(bag),

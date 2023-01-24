@@ -415,5 +415,20 @@
       .then((res) => {
         alert(res)
       })
+
+      let res2 = await fetch(`http://localhost:8080/cart`, {
+      headers: { Authorization: localStorage.getItem("usertoken") },
+    })
+      .then((res) => res.json())
+      .then((res) => {
+        bag = [...res];
+        render(bag);//  DISPLAY********************************------>
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+
+
+      
   }
 </script>

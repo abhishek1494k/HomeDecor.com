@@ -5,12 +5,13 @@ let motherDiv=document.getElementById("right_div_2")
   let showAll = document.getElementById("showAllBtn")
 
 async function onload(){
-    let res = await fetch(`https://cautious-fox-life-jacket.cyclic.app/pdt/category/${localStorage.getItem("category")}`, {
-      headers: { Authorization: localStorage.getItem("token") },
+    let res = await fetch(`https://good-rose-goshawk-yoke.cyclic.app/pdt/category/${localStorage.getItem("category")}`, {
+      headers: { Authorization: localStorage.getItem("usertoken") },
     })
       .then((res) => res.json())
       .then((res) => {
         bag = [...res];
+        console.log(bag)
         render(bag);//  DISPLAY********************************------>
       })
       .catch((err) => {
@@ -73,7 +74,7 @@ onload();
 
   async function cartPdt(id){
     let cartItem;
-    let res = await fetch(`https://cautious-fox-life-jacket.cyclic.app/pdt/${id}`, {
+    let res = await fetch(`https://good-rose-goshawk-yoke.cyclic.app/pdt/${id}`, {
       headers: { Authorization: localStorage.getItem("usertoken") },
     })
       .then((res) => res.json())
@@ -87,7 +88,7 @@ onload();
       });
 
 
-    let res1 = await fetch("https://cautious-fox-life-jacket.cyclic.app/cart", {
+    let res1 = await fetch("https://good-rose-goshawk-yoke.cyclic.app/cart", {
     method: "POST",
     headers: {
     "Content-Type": "application/json",
