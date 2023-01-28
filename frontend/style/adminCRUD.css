@@ -15,6 +15,8 @@
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
+    position: fixed;
+        background-color:  rgb(56, 86, 122);
   }
 
   #left_div_1 {
@@ -23,6 +25,7 @@
     align-items: center;
     border: 1px solid rgb(255, 255, 255);
     padding: 10px;
+        background-color: white;
   }
 
   #left_div_2 {
@@ -30,29 +33,36 @@
     flex-direction: column;
     align-items: center;
     align-content: center;
-    border: 1px solid rgb(255, 255, 255);
+    /* border: 1px solid rgb(255, 255, 255); */
     padding-top: 30px;
     padding-bottom: 30px;
+        background-color:  rgb(56, 86, 122);
   }
 
   #left_div_2 button {
     border: none;
     outline: none;
-    background-color: white;
+    /* background-color: white; */
     font-weight: 600;
-    padding: 8px 40px;
+    padding: 8px 0px;
+    width: 100%;
+    color: white;
+    background-color:  rgb(56, 86, 122);
   }
 
   #left_div_2 button:hover {
-    background-color: rgb(215, 215, 215);
+    background-color: rgb(255, 255, 255);
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    color: black;
   }
 
-  #left_div_2 div:hover {
+  /* #left_div_2 div:hover {
     background-color: rgb(215, 215, 215);
-  }
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  } */
 
   #left_div_2 div {
-    border: 1px solid rgb(255, 255, 255);
+    /* border: 1px solid rgb(255, 255, 255); */
     width: 100%;
     margin: 5px;
     display: flex;
@@ -66,10 +76,11 @@
     width: 80%;
     display: flex;
     flex-direction: column;
+    margin-left: 220px;
   }
 
   #right_div_1 {
-    border-bottom: 1px solid rgb(125, 12, 12);
+    border-bottom: 1px solid rgb(66, 8, 8);
     padding: 5px;
     display: flex;
     flex-direction: row;
@@ -96,7 +107,7 @@
   }
 
   #showAdd {
-    border: 1px solid black;
+    border: 1px solid rgb(255, 255, 255);
     height: auto;
     align-content: center;
   }
@@ -129,11 +140,12 @@
 
   #showAll{
     display: grid;
-    grid-template-columns: repeat(3,1fr);
+    grid-template-columns: repeat(4,1fr);
     grid-template-rows: auto;
+    gap:5px;
   }
   #showAll>div{
-    border:1px solid rgb(220, 16, 16);
+    border:1px solid rgb(94, 20, 20);
     padding:10px;
     display: flex;
     flex-direction: column;
@@ -141,11 +153,11 @@
   }
   #showAll div img{
     width: 100%;
-    border:1px solid rgb(0, 0, 0);
+    border:1px solid rgb(172, 172, 172);
   }
   #showAll>div>div{
     padding:2px;
-
+    font-size: small;
   }
   #showAll>div>div:nth-child(3){
     display: flex;
@@ -161,6 +173,16 @@
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+  }
+  #showAll>div>div:last-child>button:hover{
+    background-color:  rgb(56, 86, 122);
+    border: none;
+    color: white;
+    font-weight: 600;
+    padding: 2px 4px;
+  }
+  #showAll>div>div:last-child>button{
+    padding: 2px 2px;
   }
 
   #showUser>div{

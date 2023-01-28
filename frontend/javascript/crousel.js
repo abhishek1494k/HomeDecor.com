@@ -14,6 +14,15 @@ let arr = [
   "https://b3h2.scene7.com/is/image/BedBathandBeyond/S321-10301-FAB-Wide_Pinstripe_3pc_Comforter_set_NAVY_002_ecom_imageset?%24380%24=&wid=2000&hei=2000",
   "https://b3h2.scene7.com/is/image/BedBathandBeyond/2022-02-07-22-30_444800852917_1_imageset?%24380%24=&wid=2000&hei=2000",
   "https://b3h2.scene7.com/is/image/BedBathandBeyond/2022-02-08-10-01_1_ugg_corey_snow_cmf_pckpri_v2_imageset?%24380%24=&wid=2000&hei=2000",
+  "https://b3h2.scene7.com/is/image/BedBathandBeyond/846756066477mb_imageset?%24380%24=&wid=2000&hei=2000",
+  "https://b3h2.scene7.com/is/image/BedBathandBeyond/2021-10-18-12-03_1_ugg_melangeclassicsherpa_ashfog_pri_imageset?%24380%24=&wid=2000&hei=2000",
+  "https://b3h2.scene7.com/is/image/BedBathandBeyond/mktplace-s-a06ce76d-8d61-4ca2-9844-05bba25ad8fe?%24380%24=&wid=2000&hei=2000",
+  "https://b3h2.scene7.com/is/image/BedBathandBeyond/lf_370145469519509p_imageset?%24380%24=&wid=2000&hei=2000",
+  "https://b3h2.scene7.com/is/image/BedBathandBeyond/761318252221_imageset?%24380%24=&wid=2000&hei=2000",
+  "https://b3h2.scene7.com/is/image/BedBathandBeyond/2020-12-04-10-27_444800405281_imageset?%24380%24=&wid=2000&hei=2000",
+  "https://b3h2.scene7.com/is/image/BedBathandBeyond/2021-05-06-21-50_d7k_8152_imageset?%24380%24=&wid=2000&hei=2000",
+  "https://b3h2.scene7.com/is/image/BedBathandBeyond/2022-06-24-02-20_196927033587_imageset?%24380%24=&wid=2000&hei=2000",
+  "https://b3h2.scene7.com/is/image/BedBathandBeyond/2022-04-22-04-05_wish_001_tan_primaryjpg_imageset?%24380%24=&wid=2000&hei=2000"
 ];
 let bigDiv = document.querySelector(".crousel_div1");
 function crousel() {
@@ -46,7 +55,7 @@ document.getElementById("left_crousel1").addEventListener("click", () => {
   console.log("left");
   bigDiv.innerHTML = "";
   for (let i = 0; i < 5; i++) {
-    let c=Math.floor(Math.random()*14)+1
+    let c=Math.floor(Math.random()*23)+1
     let div = document.createElement("div");
     let img = document.createElement("img");
     img.setAttribute("src", arr[c]);
@@ -74,7 +83,7 @@ document.getElementById("right_crousel1").addEventListener("click", () => {
   console.log("right");
   bigDiv.innerHTML = "";
   for (let i = 0; i < 5; i++) {
-    let c=Math.floor(Math.random()*14)+1
+    let c=Math.floor(Math.random()*23)+1
     let div = document.createElement("div");
     count++;
     let img = document.createElement("img");
@@ -104,7 +113,7 @@ let bigDiv2 = document.querySelector(".crousel_div2");
 function crousel2() {
   for (let i = 5; i < 10; i++) {
     let div = document.createElement("div");
-    let c=Math.floor(Math.random()*14)+1
+    let c=Math.floor(Math.random()*23)+1
     let img = document.createElement("img");
     img.setAttribute("src", arr[c]);
     img.setAttribute("width", "100%");
@@ -131,7 +140,7 @@ document.getElementById("left_crousel2").addEventListener("click", () => {
   bigDiv2.innerHTML = "";
   for (let i = 0; i < 5; i++) {
     let div = document.createElement("div");
-    let c=Math.floor(Math.random()*14)+1
+    let c=Math.floor(Math.random()*23)+1
     let img = document.createElement("img");
     img.setAttribute("src", arr[c]);
     img.setAttribute("width", "100%");
@@ -157,7 +166,7 @@ document.getElementById("right_crousel2").addEventListener("click", () => {
   bigDiv2.innerHTML = "";
   for (let i = 5; i < 10; i++) {
     let div = document.createElement("div");
-    let c=Math.floor(Math.random()*14)+1
+    let c=Math.floor(Math.random()*23)+1
     let img = document.createElement("img");
     img.setAttribute("src", arr[c]);
     img.setAttribute("width", "100%");
@@ -185,7 +194,7 @@ let bigDiv3 = document.querySelector(".crousel_div3");
 function crousel3() {
   for (let i = 10; i < 15; i++) {
     let div = document.createElement("div");
-    let c=Math.floor(Math.random()*14)+1
+    let c=Math.floor(Math.random()*23)+1
     let img = document.createElement("img");
     img.setAttribute("src", arr[c]);
     img.setAttribute("width", "100%");
@@ -212,7 +221,7 @@ document.getElementById("left_crousel3").addEventListener("click", () => {
   bigDiv3.innerHTML = "";
   for (let i = 0; i < 5; i++) {
     let div = document.createElement("div");
-    let c=Math.floor(Math.random()*14)+1
+    let c=Math.floor(Math.random()*23)+1
     let img = document.createElement("img");
     img.setAttribute("src", arr[c]);
     img.setAttribute("width", "100%");
@@ -238,7 +247,7 @@ document.getElementById("right_crousel3").addEventListener("click", () => {
   bigDiv3.innerHTML = "";
   for (let i = 0; i < 5; i++) {
     let div = document.createElement("div");
-    let c=Math.floor(Math.random()*14)+1
+    let c=Math.floor(Math.random()*23)+1
     let img = document.createElement("img");
     img.setAttribute("src", arr[c]);
     img.setAttribute("width", "100%");

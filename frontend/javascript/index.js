@@ -36,6 +36,18 @@ right.addEventListener("click",()=>{
 window.onload = function() {
     document.getElementById("popup").style.visibility = "visible";
   }
+
+
+
+
+  let popBtn=document.getElementById("popup_button")
+
+  popBtn.addEventListener("click",()=>{
+    let popInput=document.getElementById("popup_input").value;
+    alert(`${popInput} is now Subscribed ✅`)
+    closePopup()
+  })
+
   function closePopup() {
     document.getElementById("popup").style.visibility = "hidden";
   }

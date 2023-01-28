@@ -37,8 +37,6 @@
   display: flex;
   background-color: rgb(56, 86, 122);
   width: 100%;
-
-
 }
 #top_blue_left {
   width: 50%;
@@ -52,7 +50,7 @@
   font-weight: 600;
   color: white;
   text-decoration: none;
-  width: 10%;
+  width: 15%;
 }
 #top_blue_right {
   width: 50%;
@@ -143,7 +141,7 @@
   z-index: 1;
   position: fixed;
   width: 100%;
-  top:0;
+  top: 0;
 }
 #search_bar img {
   width: 9%;
@@ -165,7 +163,7 @@
   font-size: x-large;
   color: rgb(56, 86, 122);
 }
-/* Three*1---------------- */
+/* ----------------Three*One---------------- */
 .three_one {
   width: 82%;
   margin: auto;
@@ -177,6 +175,7 @@
 
 .three_one div {
   margin: 10px;
+  transition: 0.3s;
 }
 
 .three_one div a {
@@ -184,6 +183,13 @@
   text-decoration: none;
   margin-left: 20px;
   color: rgb(56, 86, 122);
+}
+
+.three_one div:hover {
+  margin: 10px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  border-radius: 5px;
+  /* padding-bottom: 5px; */
 }
 
 .three_one div a:hover {
@@ -201,9 +207,10 @@
 #four_one div {
   margin: 10px;
   padding: 5px;
+  transition: 0.5s;
 }
 #four_one div:hover {
-  border: 1px solid black;
+border:1px solid black;
 }
 #four_one div img {
   width: 100%;
@@ -211,7 +218,7 @@
 #four_one div p {
   font-size: x-small;
 }
-
+/*------------------ Two_One---------------- */
 #two_one {
   width: 90%;
   margin: auto;
@@ -222,9 +229,14 @@
 }
 #two_one div {
   margin: 10px;
+  padding-bottom: 5px;
+  transition: 0.5s;
 }
 #two_one div:hover {
-  border: 1px solid black;
+  /* border: 1px solid black; */
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  /* padding-bottom: 5px; */
+  border-radius: 5px;
 }
 #two_one div img {
   width: 100%;
@@ -245,10 +257,10 @@
   border: 1px solid rgb(255, 255, 255);
   grid-template-columns: repeat(6, 1fr);
   grid-template-rows: auto;
-  gap: 5px;
+  gap: 10px;
 }
 #six_three div img {
-  width: 100%;
+  width: 98%;
 }
 #six_three div p {
   font-size: x-small;
@@ -257,6 +269,14 @@
 }
 #six_three div {
   text-align: center;
+  padding: 2px;
+  transition: 0.3s;
+}
+
+#six_three div:hover {
+  border: 1px solid black;
+  border-style: dotted;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
 /* -------------Footer------------- */
@@ -273,14 +293,14 @@
   background-color: rgb(245, 245, 245);
   height: auto;
   color: rgb(71, 71, 71);
-  border: 1px solid black;
+  /* border: 1px solid black; */
   padding-bottom: 30px;
 }
 
 #footer_container_centre {
   width: 96%;
   margin: auto;
-  height:auto;
+  height: auto;
   background-color: rgb(245, 245, 245);
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -304,60 +324,60 @@
 #social_media input,
 #social_media button,
 #social_media h5 {
-  margin-bottom: 20px ;
+  margin-bottom: 20px;
 }
-#social_media p{
+#social_media p {
   font-size: xx-small;
-
 }
-#social_media div i:hover{
-color: rgb(255, 23, 23);
+#social_media div i:hover {
+  color: rgb(255, 23, 23);
 }
-#social_media div{
+#social_media div {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   padding: 5px;
 }
-#social_media input{
+#social_media input {
   padding: 5px;
   margin-bottom: 2px;
   border-radius: 2px;
   outline: none;
   border: 1px solid rgb(156, 156, 156);
   background-color: rgb(255, 255, 255);
-  box-shadow: rgb(204, 219, 232) 3px 3px 6px 0px inset, rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;
+  box-shadow: rgb(204, 219, 232) 3px 3px 6px 0px inset,
+    rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;
 }
-#social_media button{
+#social_media button {
   padding-top: 10px;
   padding-bottom: 10px;
   font-size: x-small;
   font-weight: 600;
   color: white;
   border-radius: 5px;
-  background-color:  rgb(56, 86, 122);
+  background-color: rgb(56, 86, 122);
 }
 
-#social_media h5{
+#social_media h5 {
   color: black;
 }
 
-.footer_one>div{
+.footer_one > div {
   display: flex;
   flex-direction: column;
 }
 
-.footer_one{
+.footer_one {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   padding: 10px;
 }
-.footer_one>div>h5{
+.footer_one > div > h5 {
   margin-bottom: 20px;
 }
 
-.footer_one>div ul li{
+.footer_one > div ul li {
   text-decoration: none;
   list-style: none;
   font-size: x-small;
@@ -371,12 +391,47 @@ color: rgb(255, 23, 23);
 }
 
 /* Categories */
-#categories button{
+#categories button {
   background-color: white;
   border: none;
-font-size: xx-small;
-font-weight: 500;
-padding: 5px 0px;
-color: rgb(79, 79, 79);
-cursor: pointer;
+  font-size: xx-small;
+  font-weight: 500;
+  padding: 5px 0px;
+  color: rgb(79, 79, 79);
+  cursor: pointer;
+}
+
+#footer_last {
+  width: 100%;
+  background-color: rgb(245, 245, 245);
+  height: 300px;
+  color: rgb(71, 71, 71);
+  /* border: 5px solid rgb(212, 212, 212); */
+  padding-bottom: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#footer_last_centre {
+  width: 30%;
+  height: 60%;
+  /* border: 1px solid black; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  justify-content: space-between;
+}
+
+#footer_last_centre_second {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 80%;
+}
+
+#footer_last_centre > div:last-child > p {
+  font-size: x-small;
+  color: rgb(79, 79, 79);
 }
