@@ -1,4 +1,7 @@
-# valid-morning-8854
+<div align="center" > 
+<h2>Home-Decor.com<h2>
+<img width="30%" src="https://user-images.githubusercontent.com/112754448/222980375-e82dfd88-8589-438e-9356-abddaad9a003.png"><br><br>
+
 Frontend Link:https://www-homedecor-com.netlify.app/ <br> <br>
 Backend Link: https://good-rose-goshawk-yoke.cyclic.app/ <br> <br>
 Real Website: https://www.bedbathandbeyond.com/ <br> <br>
@@ -50,5 +53,6 @@ Version of npm packages used: <br><br>
 13. Update Products:<br>
 ![image](https://user-images.githubusercontent.com/112754448/213984088-f73b756d-afab-4cac-9707-0984d24dbaa6.png)<br><br>
 
+# valid-morning-8854
 
 
